@@ -1,0 +1,26 @@
+.marquee {
+  display: flex;
+  overflow: clip;
+  white-space: nowrap;
+  width: 100%;
+}
+.marquee__item {
+  padding: 0 2rem;
+  animation: marquee-animation var(--speed, 10s) linear infinite
+    var(--direction, normal);
+}
+.marquee:hover .marquee__item {
+  animation-play-state: paused;
+}
+@keyframes marquee-animation {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.announcement-bar__link:hover {
+  text-decoration: none;
+}

@@ -2,21 +2,21 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
+    "marquee-announcement-bar": {
+      "type": "marquee-announcement-bar",
       "blocks": {
-        "announcement-bar-0": {
+        "marquee-announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "FRESH STOCK ALERT! 🎲 Your Next Favorite Game Awaits at Barkada Game Central!",
             "text_alignment": "center",
             "color_scheme": "scheme-1",
-            "link": ""
+            "link": "https://barkada-game-central.myshopify.com/collections/all"
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "marquee-announcement-bar-0"
       ]
     },
     "header": {
@@ -38,7 +38,7 @@
     }
   },
   "order": [
-    "announcement-bar",
+    "marquee-announcement-bar",
     "header"
   ]
 }
