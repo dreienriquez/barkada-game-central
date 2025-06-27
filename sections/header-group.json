@@ -19,14 +19,13 @@
         "marquee-announcement-bar-0"
       ]
     },
-    "header": {
-      "type": "header",
+    "mega-demo": {
+      "type": "mega-demo",
       "settings": {
         "color_scheme": "scheme-1",
         "logo_position": "middle-left",
         "menu": "main-menu",
-        "menu_type_desktop": "dropdown",
-        "sticky_header_type": "on-scroll-up",
+        "sticky_header_type": "always",
         "show_line_separator": true,
         "enable_country_selector": true,
         "enable_language_selector": true,
@@ -39,6 +38,6 @@
   },
   "order": [
     "marquee-announcement-bar",
-    "header"
+    "mega-demo"
   ]
 }

@@ -1,0 +1,176 @@
+{% schema %}
+{
+  "name": "Mega Menu",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Mega Menu Config",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "First Image"
+        },
+        {
+          "type": "text",
+          "id": "image_1_text",
+          "label": "First Image Text"
+        },
+        {
+          "type": "url",
+          "id": "image_1_link",
+          "label": "First Image Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Second Image"
+        },
+        {
+          "type": "text",
+          "id": "image_2_text",
+          "label": "Second Image Text"
+        },
+        {
+          "type": "url",
+          "id": "image_2_link",
+          "label": "Second Image Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mega Menu",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  .mega-menu-wrapper {
+    position: relative;
+  }
+  .main-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .menu-item {
+    position: relative;
+  }
+  .menu-item > a {
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+  }
+  .has-submenu:hover .mega-menu {
+    display: flex;
+  }
+  .mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    display: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+  }
+  .mega-menu__columns {
+    display: flex;
+    flex: 3;
+    padding: 2rem;
+  }
+  .mega-menu__column {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  .mega-menu__column h4 {
+    margin-bottom: 0.5rem;
+  }
+  .mega-menu__images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+  }
+  .mega-menu__image {
+    position: relative;
+  }
+  .mega-menu__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .mega-menu__image span {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+{% endstylesheet %}
+
+<div class='mega-menu-wrapper'>
+  <ul class='main-menu'>
+    {% for block in section.blocks %}
+      {% assign menu = linklists[block.settings.menu] %}
+      {% if menu.links != blank %}
+        {% for link in menu.links %}
+          <li class='menu-item {% if link.links != blank %}has-submenu{% endif %}'>
+            <a href='{{ link.url }}'>{{ link.title }}</a>
+            {% if link.links != blank %}
+              <div class='mega-menu'>
+                <div class='mega-menu__columns'>
+                  <div class='mega-menu__column'>
+                    <ul>
+                      {% for child_link in link.links %}
+                        <li>
+                          <a href='{{ child_link.url }}'>{{ child_link.title }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+                <div class='mega-menu__images'>
+                  {% comment %}
+                    {% if block.settings.image_1 %}
+                      <div class='mega-menu__image'>
+                        <a href='{{ block.settings.image_1_link }}'>
+                          <img src='{{ block.settings.image_1 | image_url: width: 500 }}'>
+                          {% if block.settings.image_1_text != blank %}
+                            <span>{{ block.settings.image_1_text }}</span>
+                          {% endif %}
+                        </a>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.image_2 %}
+                      <div class='mega-menu__image'>
+                        <a href='{{ block.settings.image_2_link }}'>
+                          <img src='{{ block.settings.image_2 | image_url: width: 500 }}'>
+                          {% if block.settings.image_2_text != blank %}
+                            <span>{{ block.settings.image_2_text }}</span>
+                          {% endif %}
+                        </a>
+                      </div>
+                    {% endif %}
+                  {% endcomment %}
+                </div>
+              </div>
+            {% endif %}
+          </li>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
