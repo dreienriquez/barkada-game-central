@@ -1,45 +1,33 @@
-{% stylesheet %}
-  /* Tailwind CSS Prefix Example */
-  .twcss-carousel-container {
-    @apply twcss-relative twcss-overflow-hidden twcss-w-full;
-  }
-
-  .twcss-carousel-slide {
-    @apply twcss-w-full twcss-h-full twcss-absolute twcss-top-0 twcss-left-0 twcss-transition-transform twcss-duration-500;
-  }
-
-  .twcss-carousel-content {
-    @apply twcss-absolute twcss-text-white;
-  }
-{% endstylesheet %}
-
-<div class='twcss-carousel-container' data-carousel-speed='{{ section.settings.carousel_speed | times: 1000 }}'>
+<div
+  class="twcss-relative twcss-overflow-hidden twcss-w-full"
+  data-carousel-speed="{{ section.settings.carousel_speed | times: 1000 }}"
+>
   {% for block in section.blocks %}
     <div
-      class='twcss-carousel-slide'
-      style='background-image: url({{ block.settings.image | image_url }}); background-size: cover;'
+      class="twcss-w-full twcss-h-full twcss-absolute twcss-top-0 twcss-left-0 twcss-transition-transform twcss-duration-500"
+      style="background-image: url({{ block.settings.image | image_url }}); background-size: cover;"
     >
       <div
-        class='twcss-carousel-content twcss-p-{{ block.settings.container_padding }}'
-        style='
+        class="twcss-absolute twcss-text-white twcss-p-{{ block.settings.container_padding }}"
+        style="
           background-color: {{ block.settings.container_color }};
           color: {{ block.settings.title_color }};
           font-size: {{ block.settings.title_font_size }}px;
           {{ block.settings.container_position | replace: '-', ':' }}
-        '
+        "
       >
-        <div class='twcss-text-{{ block.settings.content_layout }}'>
-          <h2 class='twcss-text-[{{ block.settings.title_font_size }}px] twcss-text-[{{ block.settings.title_color }}]'>
+        <div class="twcss-text-{{ block.settings.content_layout }}">
+          <h2 class="twcss-text-[{{ block.settings.title_font_size }}px] twcss-text-[{{ block.settings.title_color }}]">
             {{ block.settings.title }}
           </h2>
-          <p class='twcss-text-[{{ block.settings.subtitle_font_size }}px] twcss-text-[{{ block.settings.subtitle_color }}]'>
+          <p class="twcss-text-[{{ block.settings.subtitle_font_size }}px] twcss-text-[{{ block.settings.subtitle_color }}]">
             {{ block.settings.subtitle }}
           </p>
           {% if block.settings.button_label != blank %}
             <a
-              href='{{ block.settings.button_link }}'
-              class='twcss-inline-block twcss-mt-4 twcss-px-4 twcss-py-2'
-              style='font-size: {{ block.settings.button_font_size }}px; color: {{ block.settings.button_color }};'
+              href="{{ block.settings.button_link }}"
+              class="twcss-inline-block twcss-mt-4 twcss-px-4 twcss-py-2"
+              style="font-size: {{ block.settings.button_font_size }}px; color: {{ block.settings.button_color }};"
             >
               {{ block.settings.button_label }}
             </a>
@@ -49,10 +37,10 @@
     </div>
   {% endfor %}
 
-  <button class='twcss-absolute twcss-left-0 twcss-top-1/2 twcss-transform -twcss-translate-y-1/2 twcss-z-10 twcss-bg-black twcss-text-white twcss-p-2'>
+  <button class="twcss-absolute twcss-left-0 twcss-top-1/2 twcss-transform -twcss-translate-y-1/2 twcss-z-10 twcss-bg-black twcss-text-white twcss-p-2">
     ←
   </button>
-  <button class='twcss-absolute twcss-right-0 twcss-top-1/2 twcss-transform -twcss-translate-y-1/2 twcss-z-10 twcss-bg-black twcss-text-white twcss-p-2'>
+  <button class="twcss-absolute twcss-right-0 twcss-top-1/2 twcss-transform -twcss-translate-y-1/2 twcss-z-10 twcss-bg-black twcss-text-white twcss-p-2">
     →
   </button>
 </div>
