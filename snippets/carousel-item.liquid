@@ -1,0 +1,64 @@
+<div
+  class='slide twcss-flex twcss-w-full twcss-h-[75vh] twcss-bg-cover twcss-bg-center'
+  style='background-image: url({{ block.settings.image | image_url }});'
+>
+  <div
+    class='
+      twcss-flex twcss-flex-1 twcss-m-auto
+      {% if block.settings.mobile_container_position == "top" %} twcss-mt-0 twcss-justify-center{% endif %}
+      {% if block.settings.mobile_container_position == "middle" %} twcss-m-auto twcss-justify-center{% endif %}
+      {% if block.settings.mobile_container_position == "bottom" %} twcss-mb-0 twcss-justify-center{% endif %}
+      {% if block.settings.container_position == "top-center" %} lg:twcss-mt-0 lg:twcss-justify-center {% endif %}
+      {% if block.settings.container_position == "top-left" %} lg:twcss-mt-0 lg:twcss-justify-start {% endif %}
+      {% if block.settings.container_position == "top-right" %} lg:twcss-mt-0 lg:twcss-justify-end {% endif %}
+      {% if block.settings.container_position == "middle-center" %} lg:twcss-justify-center{% endif %}
+      {% if block.settings.container_position == "middle-left" %} lg:twcss-justify-start {% endif %}
+      {% if block.settings.container_position == "middle-right" %} lg:twcss-justify-end {% endif %}
+      {% if block.settings.container_position == "bottom-center" %} lg:twcss-mb-0 lg:twcss-justify-center {% endif %}
+      {% if block.settings.container_position == "bottom-left" %} lg:twcss-mb-0 lg:twcss-justify-start {% endif %}
+      {% if block.settings.container_position == "bottom-right" %} lg:twcss-mb-0 lg:twcss-justify-end {% endif %}
+    '
+  >
+    <div
+      class='
+        twcss-m-[2rem] lg:twcss-m-[5rem] twcss-flex tw-gap-[2rem] twcss-flex-col color-{{ block.settings.container_color_scheme}}
+        {% if block.settings.content_layout == "left" %} twcss-items-start {% endif %}
+        {% if block.settings.content_layout == "center" %} twcss-items-center {% endif %}
+        {% if block.settings.content_layout == "right" %} twcss-items-end {% endif %}
+      '
+      style='padding: {{ block.settings.container_padding }}px;'
+    >
+      <h1
+        class='
+          twcss-font-bold
+          {% if block.settings.content_layout == "left" %} twcss-text-start {% endif %}
+          {% if block.settings.content_layout == "center" %} twcss-text-center {% endif %}
+          {% if block.settings.content_layout == "right" %} twcss-text-end {% endif %}
+        '
+        style='font-size: {{ block.settings.title_font_size }}px;'
+      >
+        {{ block.settings.title }}
+      </h1>
+      <p
+        class='
+          twcss-text-[2rem]
+          {% if block.settings.content_layout == "left" %} twcss-text-start {% endif %}
+            {% if block.settings.content_layout == "center" %} twcss-text-center {% endif %}
+            {% if block.settings.content_layout == "right" %} twcss-text-end {% endif %}
+        '
+        style='font-size: {{ block.settings.subtitle_font_size }}px;'
+      >
+        {{ block.settings.subtitle }}
+      </p>
+      <div class='twcss-mt-4 twcss-px-6 twcss-py-2 twcss-font-bold twcss-rounded color-{{ block.settings.button_color_scheme}}'>
+        <p>
+          <a
+            href='{{ block.settings.button_link }}'
+          >
+            {{- block.settings.button_label -}}
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

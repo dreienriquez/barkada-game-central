@@ -9,108 +9,72 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
     "featured_carousel_x87Ap6": {
       "type": "featured-carousel",
       "blocks": {
         "image_block_hLQQYk": {
           "type": "image_block",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_c4pi0tc4pi0tc4pi.png",
-            "container_size": "medium",
-            "container_color": "#ffffff",
-            "container_position": "middle-center",
-            "mobile_container_position": "middle",
-            "container_padding": 20,
-            "content_layout": "center",
-            "title": "Big Sale",
-            "title_font_size": 32,
-            "title_color": "#000000",
-            "subtitle": "Up to 50% off",
-            "subtitle_font_size": 20,
-            "subtitle_color": "#333333",
-            "button_label": "Shop Now",
+            "image": "shopify://shop_images/Gemini_Generated_Image_xuplx5xuplx5xupl.png",
+            "container_color_scheme": "scheme-4",
+            "container_position": "middle-right",
+            "mobile_container_position": "bottom",
+            "container_padding": 28,
+            "content_layout": "right",
+            "title": "Arcane Arcana Games",
+            "title_font_size": 40,
+            "subtitle": "...is here!",
+            "subtitle_font_size": 26,
+            "button_label": "VIEW MORE",
             "button_link": "",
-            "button_font_size": 16,
-            "button_color": "#ffffff"
+            "button_color_scheme": "scheme-4"
           }
         },
         "image_block_tyjTPk": {
           "type": "image_block",
           "settings": {
             "image": "shopify://shop_images/backgammon-and-dice-flat-lay.jpg",
-            "container_size": "medium",
-            "container_color": "#ffffff",
-            "container_position": "bottom-left",
+            "container_color_scheme": "",
+            "container_position": "top-right",
+            "mobile_container_position": "top",
+            "container_padding": 20,
+            "content_layout": "left",
+            "title": "New Arrivals",
+            "title_font_size": 40,
+            "subtitle": "Check out our latest games",
+            "subtitle_font_size": 20,
+            "button_label": "VIEW COLLECTION",
+            "button_link": "",
+            "button_color_scheme": "scheme-2"
+          }
+        },
+        "image_block_3eEdPC": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_ddqojzddqojzddqo.png",
+            "container_color_scheme": "scheme-5",
+            "container_position": "bottom-center",
             "mobile_container_position": "middle",
             "container_padding": 20,
             "content_layout": "center",
-            "title": "New Arrivals",
+            "title": "Liked our games?",
             "title_font_size": 32,
-            "title_color": "#000000",
-            "subtitle": "Check out our latest styles",
+            "subtitle": "Get to know the publishers behind them and check their other works!",
             "subtitle_font_size": 20,
-            "subtitle_color": "#333333",
-            "button_label": "Browse",
+            "button_label": "MEET THE PUBLISHERS",
             "button_link": "",
-            "button_font_size": 16,
-            "button_color": "#ffffff"
+            "button_color_scheme": "scheme-5"
           }
         }
       },
       "block_order": [
         "image_block_hLQQYk",
-        "image_block_tyjTPk"
+        "image_block_tyjTPk",
+        "image_block_3eEdPC"
       ],
       "name": "Featured Carousel",
       "settings": {
-        "carousel_speed": 10
+        "carousel_speed": 5
       }
     },
     "rich_text_with_image": {
@@ -414,7 +378,6 @@
     }
   },
   "order": [
-    "image_banner",
     "featured_carousel_x87Ap6",
     "rich_text_with_image",
     "featured_collection",
