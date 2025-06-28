@@ -62,7 +62,8 @@
         "image_ndiQCz": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_c4pi0tc4pi0tc4pi_-_Edited.png"
+            "image": "shopify://shop_images/Gemini_Generated_Image_c4pi0tc4pi0tc4pi_-_Edited.png",
+            "image_size": "small"
           }
         },
         "heading": {
