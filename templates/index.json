@@ -56,6 +56,63 @@
         "show_text_below": false
       }
     },
+    "featured_carousel_x87Ap6": {
+      "type": "featured-carousel",
+      "blocks": {
+        "image_block_hLQQYk": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_c4pi0tc4pi0tc4pi.png",
+            "container_size": "medium",
+            "container_color": "#ffffff",
+            "container_position": "middle-center",
+            "mobile_container_position": "middle",
+            "container_padding": 20,
+            "content_layout": "center",
+            "title": "Big Sale",
+            "title_font_size": 32,
+            "title_color": "#000000",
+            "subtitle": "Up to 50% off",
+            "subtitle_font_size": 20,
+            "subtitle_color": "#333333",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_font_size": 16,
+            "button_color": "#ffffff"
+          }
+        },
+        "image_block_tyjTPk": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/backgammon-and-dice-flat-lay.jpg",
+            "container_size": "medium",
+            "container_color": "#ffffff",
+            "container_position": "bottom-left",
+            "mobile_container_position": "middle",
+            "container_padding": 20,
+            "content_layout": "center",
+            "title": "New Arrivals",
+            "title_font_size": 32,
+            "title_color": "#000000",
+            "subtitle": "Check out our latest styles",
+            "subtitle_font_size": 20,
+            "subtitle_color": "#333333",
+            "button_label": "Browse",
+            "button_link": "",
+            "button_font_size": 16,
+            "button_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_hLQQYk",
+        "image_block_tyjTPk"
+      ],
+      "name": "Featured Carousel",
+      "settings": {
+        "carousel_speed": 10
+      }
+    },
     "rich_text_with_image": {
       "type": "rich-text-with-image",
       "blocks": {
@@ -358,6 +415,7 @@
   },
   "order": [
     "image_banner",
+    "featured_carousel_x87Ap6",
     "rich_text_with_image",
     "featured_collection",
     "image_with_text_rHcWC3",
