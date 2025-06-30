@@ -79,7 +79,10 @@
                 {{ block.settings.caption | escape }}
               </p>
             {%- when 'text' -%}
-              <div class='image-with-text__text rte {{ block.settings.text_style }}' {{ block.shopify_attributes }}>
+              <div
+                class='twcss-mb-10 image-with-text__text rte {{ block.settings.text_style }}'
+                {{ block.shopify_attributes }}
+              >
                 {{ block.settings.text }}
               </div>
             {%- when 'button' -%}
@@ -96,6 +99,8 @@
                   {{ block.settings.button_label | escape }}
                 </a>
               {%- endif -%}
+            {%- when 'email_form' -%}
+              {%- render 'newsletter' -%}
           {%- endcase -%}
         {%- endfor -%}
       </div>
@@ -463,11 +468,16 @@
           "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
         }
       ]
+    },
+    {
+      "type": "email_form",
+      "name": "t:sections.newsletter.blocks.email_form.name",
+      "limit": 1
     }
   ],
   "presets": [
     {
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "Custom Image with Text",
       "blocks": [
         {
           "type": "heading"

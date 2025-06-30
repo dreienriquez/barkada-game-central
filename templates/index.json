@@ -310,20 +310,15 @@
             "text_style": "subtitle"
           }
         },
-        "button_CmMxcR": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
+        "email_form": {
+          "type": "email_form"
         }
       },
       "block_order": [
         "caption_3xxcqn",
         "heading_PnXq6m",
         "text_GpPUH3",
-        "button_CmMxcR"
+        "email_form"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
