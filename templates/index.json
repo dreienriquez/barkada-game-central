@@ -139,6 +139,14 @@
     "custom_image_with_text_rHcWC3": {
       "type": "custom-image-with-text",
       "blocks": {
+        "caption_GxMqgk": {
+          "type": "caption",
+          "settings": {
+            "caption": "NEWEST PUBLISHER",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
+          }
+        },
         "heading_KTqHtc": {
           "type": "heading",
           "settings": {
@@ -163,6 +171,7 @@
         }
       },
       "block_order": [
+        "caption_GxMqgk",
         "heading_KTqHtc",
         "text_JzGDxW",
         "button_4nhqrT"
