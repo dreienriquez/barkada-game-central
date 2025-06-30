@@ -40,8 +40,8 @@
             "container_padding": 20,
             "content_layout": "left",
             "title": "New Arrivals",
-            "title_font_size": 40,
-            "subtitle": "Check out our latest games",
+            "title_font_size": 50,
+            "subtitle": "Check out our latest games, promos and discounts!",
             "subtitle_font_size": 20,
             "button_label": "VIEW COLLECTION",
             "button_link": "",
@@ -285,24 +285,32 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_mf4xVP": {
-      "type": "image-with-text",
+    "custom_image_with_text_7KUt6y": {
+      "type": "custom-image-with-text",
       "blocks": {
-        "heading_MGXgz4": {
+        "caption_3xxcqn": {
+          "type": "caption",
+          "settings": {
+            "caption": "SUBSCRIBE TO OUR NEWSLETTER",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
+          }
+        },
+        "heading_PnXq6m": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "<strong>Be the first to know!</strong>",
             "heading_size": "h1"
           }
         },
-        "text_cxjeUP": {
+        "text_GpPUH3": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
+            "text": "<p>Get the latest updates from your favorite publishers plus product launches, limited edition games, sales and discounts happening soon!</p>",
+            "text_style": "subtitle"
           }
         },
-        "button_K6waJz": {
+        "button_CmMxcR": {
           "type": "button",
           "settings": {
             "button_label": "Button label",
@@ -312,20 +320,22 @@
         }
       },
       "block_order": [
-        "heading_MGXgz4",
-        "text_cxjeUP",
-        "button_K6waJz"
+        "caption_3xxcqn",
+        "heading_PnXq6m",
+        "text_GpPUH3",
+        "button_CmMxcR"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/newsletter.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
         "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-4",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
@@ -394,7 +404,7 @@
     "custom_image_with_text_rHcWC3",
     "collection_list_bETi6i",
     "multicolumn_Nimg8q",
-    "image_with_text_mf4xVP",
+    "custom_image_with_text_7KUt6y",
     "multicolumn_jyyXWE"
   ]
 }
