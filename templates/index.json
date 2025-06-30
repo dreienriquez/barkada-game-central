@@ -142,21 +142,21 @@
         "heading_KTqHtc": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Tactics and Tiles Co.",
             "heading_size": "h1"
           }
         },
         "text_JzGDxW": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Tactics and Tiles Co. crafts strategic and thought-provoking games that challenge the mind—perfect for fans of abstract mechanics, resource management, and clever decision-making.</p>",
             "text_style": "body"
           }
         },
         "button_4nhqrT": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "SHOP THE COLLECTION",
             "button_link": "",
             "button_style_secondary": false
           }
@@ -169,14 +169,15 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/Gemini_Generated_Image_dz5xl2dz5xl2dz5x_2.png",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-3",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
