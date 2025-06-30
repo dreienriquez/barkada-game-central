@@ -707,6 +707,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.twcss-border-none {
+  border-style: none;
+}
+
 .twcss-bg-cover {
   background-size: cover;
 }
