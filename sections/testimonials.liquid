@@ -1,11 +1,25 @@
+<link
+  rel='stylesheet'
+  href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'
+>
 <style>
-  #carousel-container {
+  .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  #carousel-container-1 {
     position: relative;
     margin: 0 auto;
     overflow: hidden;
+    width: 100%;
+    padding: 5rem;
   }
 
-  .navigation-buttons .nav-btn {
+  .navigation-buttons-1 .nav-btn-1 {
     position: absolute;
     top: 50%;
     opacity: 0;
@@ -23,130 +37,61 @@
     margin: 0 1rem;
   }
 
-  .navigation-buttons .previous {
-    left: 0;
+  .navigation-buttons-1 .nav-btn-1.swiper-button-disabled {
+    display: none;
+  }
+
+  .navigation-buttons-1 .previous-1 {
+    left: 5rem;
     transform: translate(-100%, -50%);
   }
 
-  .navigation-buttons .next {
-    right: 0;
+  .navigation-buttons-1 .next-1 {
+    right: 5rem;
     transform: translate(100%, -50%);
   }
 
-  #carousel-container:hover .navigation-buttons .nav-btn {
+  #carousel-container-1:hover .navigation-buttons-1 .nav-btn-1 {
     opacity: 1;
     pointer-events: auto;
   }
 
-  #carousel-container:hover .navigation-buttons .previous {
+  #carousel-container-1:hover .navigation-buttons-1 .previous-1 {
     transform: translate(0, -50%);
   }
 
-  #carousel-container:hover .navigation-buttons .next {
+  #carousel-container-1:hover .navigation-buttons-1 .next-1 {
     transform: translate(0, -50%);
-  }
-
-  .slider-carousel {
-    display: flex;
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .slide {
-    min-width: 33%;
-    flex-shrink: 0;
-  }
-
-  .slide > * {
-    width: 100%;
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .fade-in-up {
-    animation: fadeInUp 1s ease-out;
   }
 </style>
 
-<div class='twcss-flex twcss-flex-1 twcss-flex-col twcss-gap-[1rem]'>
-  <h1 class='twcss-font-heading twcss-p-4 twcss-font-bold twcss-text-[2.5rem]'>What Our Customers Are Saying</h1>
-  <div id='carousel-container'>
-    <div class='navigation-buttons'>
-      <div class='previous nav-btn'>←</div>
-      <div class='next nav-btn'>→</div>
-    </div>
-    <div class='slider-carousel twcss-flex twcss-w-full twcss-justify-between'>
-      {% for block in section.blocks %}
-        {% render 'testimonial-item', block: block %}
-      {% endfor %}
-    </div>
+<div id='carousel-container-1' class='swiper'>
+  <div class='navigation-buttons-1'>
+    <div class='nav-btn-1 previous-1'>←</div>
+    <div class='nav-btn-1 next-1'>→</div>
+  </div>
+  <h1 class='twcss-font-heading twcss-pb-[3.5rem] twcss-font-bold twcss-text-[3.5rem]'>
+    What Our Customers Are Saying
+  </h1>
+  <div class='swiper-wrapper'>
+    {% for block in section.blocks %}
+      {% render 'testimonial-item', block: block %}
+    {% endfor %}
   </div>
 </div>
 
+<script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
+
 <script>
-  const slider = document.querySelector('.slider-carousel');
-  const slides = document.querySelectorAll('.slide');
-  const prev = document.querySelector('.previous');
-  const next = document.querySelector('.next');
-  let index = 0;
-  let interval;
-
-  function updateSlider() {
-    slider.style.transform = `translateX(-${index * 100}%)`;
-  }
-
-  function previousImage() {
-    index = (index - 1 + slides.length) % slides.length;
-    updateSlider();
-  }
-
-  function nextImage() {
-    index = (index + 1) % slides.length;
-    updateSlider();
-  }
-
-  prev.addEventListener('click', previousImage);
-  next.addEventListener('click', nextImage);
-
-  let startX = 0;
-  let isDragging = false;
-
-  slider.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-    isDragging = true;
-  }, { passive: true });
-
-  slider.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    const diffX = e.touches[0].clientX - startX;
-
-    if (Math.abs(diffX) > 50) {
-      if (diffX > 0) {
-        previousImage();
-      } else {
-        nextImage();
-      }
-      isDragging = false;
-    }
-  }, { passive: true });
-
-  slider.addEventListener('touchend', () => {
-    isDragging = false;
+  var swiper = new Swiper('#carousel-container-1', {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    grabCursor: 'true',
+    navigation: {
+      nextEl: '.next-1',
+      prevEl: '.previous-1',
+    },
   });
-
-  function resetInterval() {
-    clearInterval(interval);
-    interval = setInterval(nextImage, {{section.settings.carousel_speed | times: 1000}});
-  }
 </script>
 
 {% schema %}
