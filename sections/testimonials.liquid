@@ -1,0 +1,235 @@
+<style>
+  #carousel-container {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .navigation-buttons .nav-btn {
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 10;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 15%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    pointer-events: none;
+    margin: 0 1rem;
+  }
+
+  .navigation-buttons .previous {
+    left: 0;
+    transform: translate(-100%, -50%);
+  }
+
+  .navigation-buttons .next {
+    right: 0;
+    transform: translate(100%, -50%);
+  }
+
+  #carousel-container:hover .navigation-buttons .nav-btn {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #carousel-container:hover .navigation-buttons .previous {
+    transform: translate(0, -50%);
+  }
+
+  #carousel-container:hover .navigation-buttons .next {
+    transform: translate(0, -50%);
+  }
+
+  .slider-carousel {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 33%;
+    flex-shrink: 0;
+  }
+
+  .slide > * {
+    width: 100%;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 1s ease-out;
+  }
+</style>
+
+<div class='twcss-flex twcss-flex-1 twcss-flex-col twcss-gap-[1rem]'>
+  <h1 class='twcss-font-heading twcss-p-4 twcss-font-bold twcss-text-[2.5rem]'>What Our Customers Are Saying</h1>
+  <div id='carousel-container'>
+    <div class='navigation-buttons'>
+      <div class='previous nav-btn'>←</div>
+      <div class='next nav-btn'>→</div>
+    </div>
+    <div class='slider-carousel twcss-flex twcss-w-full twcss-justify-between'>
+      {% for block in section.blocks %}
+        {% render 'testimonial-item', block: block %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  const slider = document.querySelector('.slider-carousel');
+  const slides = document.querySelectorAll('.slide');
+  const prev = document.querySelector('.previous');
+  const next = document.querySelector('.next');
+  let index = 0;
+  let interval;
+
+  function updateSlider() {
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function previousImage() {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlider();
+  }
+
+  function nextImage() {
+    index = (index + 1) % slides.length;
+    updateSlider();
+  }
+
+  prev.addEventListener('click', previousImage);
+  next.addEventListener('click', nextImage);
+
+  let startX = 0;
+  let isDragging = false;
+
+  slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+  }, { passive: true });
+
+  slider.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const diffX = e.touches[0].clientX - startX;
+
+    if (Math.abs(diffX) > 50) {
+      if (diffX > 0) {
+        previousImage();
+      } else {
+        nextImage();
+      }
+      isDragging = false;
+    }
+  }, { passive: true });
+
+  slider.addEventListener('touchend', () => {
+    isDragging = false;
+  });
+
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(nextImage, {{section.settings.carousel_speed | times: 1000}});
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "tag": "section",
+  "class": "testimonials-section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial_item",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "range",
+          "id": "container_padding",
+          "label": "Container Padding (px)",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "default": 20
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Put your testimonial here"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author",
+          "default": "Jane Doe"
+        },
+        {
+          "type": "text",
+          "id": "position",
+          "label": "Position",
+          "default": "Loyal Customer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial",
+      "blocks": [
+        {
+          "type": "testimonial_item",
+          "settings": {
+            "description": "Very Good!",
+            "author": "John Doe",
+            "position": "Loyal Customer",
+            "container_padding": 20
+          }
+        },
+        {
+          "type": "testimonial_item",
+          "settings": {
+            "description": "Very Good!",
+            "author": "John Doe",
+            "position": "Loyal Customer",
+            "container_padding": 20
+          }
+        },
+        {
+          "type": "testimonial_item",
+          "settings": {
+            "description": "Very Good!",
+            "author": "John Doe",
+            "position": "Loyal Customer",
+            "container_padding": 20
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
