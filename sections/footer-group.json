@@ -14,11 +14,10 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "image_NcX9pP": {
-          "type": "image",
+        "brand_information_gfPjaC": {
+          "type": "brand_information",
           "settings": {
-            "image_width": 100,
-            "alignment": "center"
+            "show_social": true
           }
         },
         "footer-0": {
@@ -37,7 +36,7 @@
         }
       },
       "block_order": [
-        "image_NcX9pP",
+        "brand_information_gfPjaC",
         "footer-0",
         "footer-1"
       ],
