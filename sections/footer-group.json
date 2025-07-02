@@ -25,15 +25,15 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "Shop",
+            "menu": "shop-menu"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
+            "heading": "About",
+            "menu": "about-menu"
           }
         }
       },
@@ -43,11 +43,11 @@
         "footer-1"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-4",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": false,
