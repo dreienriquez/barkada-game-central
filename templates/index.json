@@ -95,10 +95,7 @@
           }
         }
       },
-      "block_order": [
-        "image_ndiQCz",
-        "heading"
-      ],
+      "block_order": ["image_ndiQCz", "heading"],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -263,10 +260,7 @@
           }
         }
       },
-      "block_order": [
-        "column_jhxzqw",
-        "column_ihCXHe"
-      ],
+      "block_order": ["column_jhxzqw", "column_ihCXHe"],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Multicolumn",
@@ -367,12 +361,12 @@
             "author": "Aldrin 'Al' Castro",
             "position": "IT Specialist & Barkada Game Master"
           }
-        },
+        }
       },
       "block_order": [
         "testimonial_jznKc9",
         "testimonial_q9rw4J",
-        "testimonial_TG343r",
+        "testimonial_TG343r"
       ],
       "name": "Testimonials",
       "settings": {

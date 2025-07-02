@@ -37,11 +37,7 @@
           }
         }
       },
-      "block_order": [
-        "brand_information_gfPjaC",
-        "footer-0",
-        "footer-1"
-      ],
+      "block_order": ["brand_information_gfPjaC", "footer-0", "footer-1"],
       "settings": {
         "color_scheme": "scheme-5",
         "newsletter_enable": false,
@@ -58,7 +54,5 @@
       }
     }
   },
-  "order": [
-    "footer"
-  ]
+  "order": ["footer"]
 }
