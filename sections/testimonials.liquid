@@ -65,7 +65,10 @@
   }
 </style>
 
-<div id='carousel-container-1' class='swiper'>
+<div
+  id='carousel-container-1'
+  class='swiper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
+>
   <div class='navigation-buttons-1'>
     <div class='nav-btn-1 previous-1'>←</div>
     <div class='nav-btn-1 next-1'>→</div>

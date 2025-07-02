@@ -77,7 +77,10 @@
   }
 </style>
 
-<div id='carousel-container'>
+<div
+  id='carousel-container'
+  class='{% if settings.animations_reveal_on_scroll %}scroll-trigger animate--slide-in{% endif %}'
+>
   <div class='navigation-buttons'>
     <div class='previous nav-btn'>←</div>
     <div class='next nav-btn'>→</div>

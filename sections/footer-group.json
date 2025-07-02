@@ -17,6 +17,7 @@
         "brand_information_gfPjaC": {
           "type": "brand_information",
           "settings": {
+            "text_size": "xs",
             "show_social": true
           }
         },
