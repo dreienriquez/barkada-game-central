@@ -23,9 +23,9 @@
     assign content_placement = 'twcss-justify-items-end'
   endif
 -%}
-<div class='twcss-flex-1 {{ content_placement }} color-{{ section.settings.color_scheme }} gradient rich-text--full-width content-container--full-width section-{{ section.id }}-padding'>
+<div class='twcss-flex-1 lg:twcss-pt-[5rem] lg:twcss-pb-[7rem] {{ content_placement }} color-{{ section.settings.color_scheme }} gradient rich-text--full-width content-container--full-width section-{{ section.id }}-padding'>
   <div class='rich-text__wrapper--{{ section.settings.desktop_content_position }}'>
-    <div class='twcss-px-20 {{ content_position }}'>
+    <div class='twcss-px-[5rem] lg:twcss-px-[15rem] {{ content_position }}'>
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'image' -%}
