@@ -18,7 +18,8 @@
           "type": "brand_information",
           "settings": {
             "text_size": "xs",
-            "show_social": true
+            "show_social": true,
+            "link": "shopify://pages/contact"
           }
         },
         "footer-0": {
