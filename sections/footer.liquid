@@ -12,7 +12,7 @@
 
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    /* padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px; */
   }
 
   @media screen and (min-width: 750px) {
@@ -22,7 +22,7 @@
 
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      /* padding-bottom: {{ section.settings.padding_bottom }}px; */
     }
   }
 {%- endstyle -%}
@@ -49,7 +49,12 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
-      <div class='footer__content-top page-width'>
+      <div
+        class='
+          {% comment %} footer__content-top  {% endcomment %}
+          page-width
+        '
+      >
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
@@ -263,7 +268,11 @@
   {%- endif -%}
 
   <div
-    class='footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
+    class='
+      twcss-flex twcss-flex-row twcss-items-center
+      {% comment %} footer__content-bottom {% endcomment %}
+      {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
+    '
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
@@ -274,7 +283,7 @@
           <localization-form>
             {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
               <div>
-                <h2 class='caption-large text-body' id='FooterCountryLabel'>{{ 'localization.country_label' | t }}</h2>
+                {% comment %} <h2 class='caption-large text-body' id='FooterCountryLabel'>{{ 'localization.country_label' | t }}</h2> {% endcomment %}
                 {%- render 'country-localization', localPosition: 'FooterCountry' -%}
               </div>
             {%- endform -%}
@@ -309,12 +318,16 @@
         {%- endif -%}
       </div>
     </div>
-    <div class='footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}'>
-      <div class='footer__copyright caption'>
-        <small class='copyright__content'
-          >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
-        </small>
-        <small class='copyright__content'>{{ powered_by_link }}</small>
+    <div class='twcss-justify-end footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}'>
+      <div class='caption'>
+        <a href='{{ shop.url }}'
+          ><small class='copyright__content'
+            >&copy; {{ shop.name }}
+            {{ 'now' | date: '%Y' }}
+            {% comment %} , {{ shop.name | link_to: routes.root_url -}} {% endcomment %}
+          </small></a
+        >
+        {% comment %} <small class='copyright__content'>{{ powered_by_link }}</small> {% endcomment %}
         {%- if section.settings.show_policy -%}
           <ul class='policies list-unstyled'>
             {%- for policy in shop.policies -%}

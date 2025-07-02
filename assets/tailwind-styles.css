@@ -778,6 +778,10 @@ video {
     scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.twcss-flex-row {
+  flex-direction: row;
+}
+
 .twcss-flex-col {
   flex-direction: column;
 }
