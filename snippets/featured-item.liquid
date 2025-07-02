@@ -1,0 +1,17 @@
+<div
+  class='twcss-bg-cover twcss-bg-center twcss-flex twcss-flex-col twcss-justify-end twcss-text-white twcss-p-[2rem]'
+  style='background-image: url({{ block.settings.background_image | image_url }}); min-height: 400px'
+>
+  <h2 class='twcss-text-[2rem] twcss-font-bold twcss-pb-[0.5rem]'>
+    {{ block.settings.item_title }}
+  </h2>
+  <p class='twcss-text-[1rem] twcss-pb-[1rem]'>
+    {{ block.settings.item_description }}
+  </p>
+  <a
+    href='{{ block.settings.link }}'
+    class='twcss-text-[0.875rem] twcss-font-bold twcss-uppercase'
+  >
+    {{ block.settings.link_name }}
+  </a>
+</div>

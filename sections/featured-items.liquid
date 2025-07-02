@@ -1,0 +1,83 @@
+<div class='featured-items-section'>
+  <div class='section-header twcss-text-[0.875rem] twcss-font-bold twcss-uppercase twcss-pb-[1rem]'>
+    {{ section.settings.header }}
+  </div>
+  <div class='section-title twcss-text-[2.5rem] twcss-font-bold twcss-pb-[2.5rem]'>
+    {{ section.settings.title }}
+  </div>
+  <div class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-2 twcss-gap-[1.5rem]'>
+    {% for block in section.blocks %}
+      {% if block.type == 'item' %}
+        {% render 'featured-item', block: block %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured Items",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Section Header",
+      "default": "FEATURED ITEMS"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "You don't want to miss these!"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Featured Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "background_image",
+          "label": "Background Image"
+        },
+        {
+          "type": "text",
+          "id": "item_title",
+          "label": "Item Title"
+        },
+        {
+          "type": "text",
+          "id": "item_description",
+          "label": "Item Description"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "link_name",
+          "label": "Link Name",
+          "default": "SHOP NOW"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 2,
+  "presets": [
+    {
+      "name": "Featured Items",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
