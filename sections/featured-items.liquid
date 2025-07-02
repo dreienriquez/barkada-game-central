@@ -1,9 +1,9 @@
-<div class='featured-items-section'>
-  <div class='section-header twcss-text-[0.875rem] twcss-font-bold twcss-uppercase twcss-pb-[1rem]'>
+<div class='twcss-p-[5rem] twcss-flex twcss-flex-col twcss-gap-[1rem]'>
+  <div class='twcss-text-[2rem] twcss-font-bold twcss-uppercase'>
     {{ section.settings.header }}
   </div>
-  <div class='section-title twcss-text-[2.5rem] twcss-font-bold twcss-pb-[2.5rem]'>
-    {{ section.settings.title }}
+  <div class='section-title twcss-text-[3.5rem] twcss-font-bold twcss-pb-[2.5rem]'>
+    <h1>{{ section.settings.title }}</h1>
   </div>
   <div class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-2 twcss-gap-[1.5rem]'>
     {% for block in section.blocks %}
@@ -29,6 +29,16 @@
       "id": "title",
       "label": "Section Title",
       "default": "You don't want to miss these!"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "Image overlay opacity",
+      "default": 50
     }
   ],
   "blocks": [

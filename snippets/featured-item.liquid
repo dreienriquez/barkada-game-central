@@ -1,16 +1,19 @@
+{%- liquid
+  assign overlay_opacity = section.settings.overlay_opacity | divided_by: 100.0
+-%}
 <div
-  class='twcss-bg-cover twcss-bg-center twcss-flex twcss-flex-col twcss-justify-end twcss-text-white twcss-p-[2rem]'
-  style='background-image: url({{ block.settings.background_image | image_url }}); min-height: 400px'
+  class='twcss-bg-cover twcss-bg-center twcss-flex twcss-flex-col twcss-text-white twcss-justify-end twcss-p-[2rem]'
+  style='background-image: linear-gradient(to top, rgba(0, 0, 0, {{ overlay_opacity }}), rgba(0, 0, 0, 0)), url({{ block.settings.background_image | image_url }}); min-height: 350px'
 >
-  <h2 class='twcss-text-[2rem] twcss-font-bold twcss-pb-[0.5rem]'>
+  <h2 class='twcss-text-white twcss-text-[4rem] twcss-font-bold twcss-pb-[0.5rem]'>
     {{ block.settings.item_title }}
   </h2>
-  <p class='twcss-text-[1rem] twcss-pb-[1rem]'>
+  <p class='twcss-text-[1.5rem] twcss-pb-[2rem]'>
     {{ block.settings.item_description }}
   </p>
   <a
     href='{{ block.settings.link }}'
-    class='twcss-text-[0.875rem] twcss-font-bold twcss-uppercase'
+    class='twcss-text-[1.5rem] twcss-font-bold twcss-uppercase'
   >
     {{ block.settings.link_name }}
   </a>
