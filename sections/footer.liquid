@@ -269,7 +269,7 @@
 
   <div
     class='
-      twcss-flex twcss-flex-row twcss-items-center
+      twcss-flex twcss-flex-col lg:twcss-flex-row lg:twcss-items-center twcss-pb-[2.5rem] lg:twcss-pb-0
       {% comment %} footer__content-bottom {% endcomment %}
       {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
     '
@@ -278,7 +278,12 @@
     {% endif %}
   >
     <div class='footer__content-bottom-wrapper page-width'>
-      <div class='footer__column footer__localization isolate'>
+      <div
+        class='
+          twcss-p-0 twcss-justify-start
+          footer__column footer__localization isolate
+        '
+      >
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <localization-form>
             {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}

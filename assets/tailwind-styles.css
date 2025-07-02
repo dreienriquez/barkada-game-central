@@ -882,6 +882,10 @@ video {
   padding: 4rem;
 }
 
+.twcss-p-0 {
+  padding: 0px;
+}
+
 .twcss-px-20 {
   padding-left: 5rem;
   padding-right: 5rem;
@@ -1018,6 +1022,14 @@ video {
     height: 40vh;
   }
 
+  .lg\:twcss-flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:twcss-items-center {
+    align-items: center;
+  }
+
   .lg\:twcss-justify-start {
     justify-content: flex-start;
   }
@@ -1028,5 +1040,9 @@ video {
 
   .lg\:twcss-justify-center {
     justify-content: center;
+  }
+
+  .lg\:twcss-pb-0 {
+    padding-bottom: 0px;
   }
 }
