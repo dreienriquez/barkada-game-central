@@ -27,7 +27,7 @@
             "subtitle_font_size": 26,
             "button_label": "VIEW MORE",
             "button_link": "",
-            "button_color_scheme": "scheme-4"
+            "button_color_scheme": "scheme-1"
           }
         },
         "image_block_tyjTPk": {
@@ -45,7 +45,7 @@
             "subtitle_font_size": 20,
             "button_label": "VIEW COLLECTION",
             "button_link": "",
-            "button_color_scheme": "scheme-2"
+            "button_color_scheme": "scheme-1"
           }
         },
         "image_block_3eEdPC": {
@@ -63,7 +63,7 @@
             "subtitle_font_size": 20,
             "button_label": "MEET THE PUBLISHERS",
             "button_link": "",
-            "button_color_scheme": "scheme-5"
+            "button_color_scheme": "scheme-3"
           }
         }
       },
@@ -95,7 +95,10 @@
           }
         }
       },
-      "block_order": ["image_ndiQCz", "heading"],
+      "block_order": [
+        "image_ndiQCz",
+        "heading"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -175,8 +178,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Gemini_Generated_Image_dz5xl2dz5xl2dz5x_2.png",
-        "height": "adapt",
+        "image": "shopify://shop_images/Gemini_Generated_Image_hruep1hruep1hrue.png",
+        "height": "large",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
@@ -260,7 +263,10 @@
           }
         }
       },
-      "block_order": ["column_jhxzqw", "column_ihCXHe"],
+      "block_order": [
+        "column_jhxzqw",
+        "column_ihCXHe"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Multicolumn",
@@ -277,6 +283,40 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "featured_items_naEKXV": {
+      "type": "featured-items",
+      "blocks": {
+        "item_6C3N9f": {
+          "type": "item",
+          "settings": {
+            "background_image": "shopify://shop_images/Gemini_Generated_Image_mfvb2bmfvb2bmfvb_4.png",
+            "item_title": "BGC Crystal D6 (Pair)",
+            "item_description": "Make your rolls stand out with these eye-catching dice!",
+            "link": "",
+            "link_name": "SHOP NOW"
+          }
+        },
+        "item_PTJigx": {
+          "type": "item",
+          "settings": {
+            "background_image": "shopify://shop_images/Gemini_Generated_Image_mfvb2bmfvb2bmfvb_3.png",
+            "item_title": "BGC Euro Card Sleeves (100-pack)",
+            "item_description": "Keep your favorite game components safe!",
+            "link": "",
+            "link_name": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": [
+        "item_6C3N9f",
+        "item_PTJigx"
+      ],
+      "name": "Featured Items",
+      "settings": {
+        "header": "FEATURED ITEMS",
+        "title": "You don't want to miss these!"
       }
     },
     "custom_image_with_text_7KUt6y": {
@@ -344,6 +384,15 @@
             "position": "University Student & Avid Gamer"
           }
         },
+        "testimonial_item_cnJaPm": {
+          "type": "testimonial_item",
+          "settings": {
+            "container_padding": 20,
+            "description": "BGC has seriously upgraded my game nights! Quick purchases and a fantastic range of titles – couldn't ask for more.",
+            "author": "Carlo \"Ace\" De Leon",
+            "position": "Casual Gamer & College Student"
+          }
+        },
         "testimonial_q9rw4J": {
           "type": "testimonial_item",
           "settings": {
@@ -365,6 +414,7 @@
       },
       "block_order": [
         "testimonial_jznKc9",
+        "testimonial_item_cnJaPm",
         "testimonial_q9rw4J",
         "testimonial_TG343r"
       ],
@@ -381,6 +431,7 @@
     "custom_image_with_text_rHcWC3",
     "collection_list_bETi6i",
     "multicolumn_Nimg8q",
+    "featured_items_naEKXV",
     "custom_image_with_text_7KUt6y",
     "testimonials"
   ]

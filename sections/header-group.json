@@ -22,7 +22,9 @@
           }
         }
       },
-      "block_order": ["marquee-announcement-bar-0"],
+      "block_order": [
+        "marquee-announcement-bar-0"
+      ],
       "settings": {
         "color_scheme": "",
         "direction": "normal",
@@ -34,16 +36,19 @@
       "settings": {
         "menu": "main-menu",
         "sticky_header_type": "always",
-        "show_line_separator": true,
+        "show_line_separator": false,
         "color_scheme": "scheme-3",
         "menu_color_scheme": "scheme-5",
-        "enable_language_selector": true,
+        "enable_language_selector": false,
         "enable_customer_avatar": true,
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 8,
+        "padding_bottom": 8
       }
     }
   },
-  "order": ["marquee-announcement-bar", "mega-menu-header"]
+  "order": [
+    "marquee-announcement-bar",
+    "mega-menu-header"
+  ]
 }
