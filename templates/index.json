@@ -193,28 +193,28 @@
         "padding_bottom": 36
       }
     },
-    "collection_list_bETi6i": {
-      "type": "collection-list",
+    "custom_featured_collection_Nr6Knd": {
+      "type": "custom-featured-collection",
       "blocks": {
-        "featured_collection_dLQmHY": {
+        "featured_collection_6tdgeh": {
           "type": "featured_collection",
           "settings": {
             "collection": "arcane-arcana-games"
           }
         },
-        "featured_collection_77DHAy": {
+        "featured_collection_xmGBCw": {
           "type": "featured_collection",
           "settings": {
             "collection": "bgc-accessories"
           }
         },
-        "featured_collection_4JcdTb": {
+        "featured_collection_Yjke9z": {
           "type": "featured_collection",
           "settings": {
             "collection": "bgc-playlabs"
           }
         },
-        "featured_collection_iLQw3q": {
+        "featured_collection_GMyz6n": {
           "type": "featured_collection",
           "settings": {
             "collection": "tactics-tiles-co"
@@ -222,23 +222,15 @@
         }
       },
       "block_order": [
-        "featured_collection_dLQmHY",
-        "featured_collection_77DHAy",
-        "featured_collection_4JcdTb",
-        "featured_collection_iLQw3q"
+        "featured_collection_6tdgeh",
+        "featured_collection_xmGBCw",
+        "featured_collection_Yjke9z",
+        "featured_collection_GMyz6n"
       ],
-      "name": "t:sections.collection-list.presets.name",
+      "name": "Custom Featured Collections",
       "settings": {
-        "title": "Collections",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "title": "Featured Publishers",
+        "color_scheme": ""
       }
     },
     "featured_items_naEKXV": {
@@ -377,6 +369,7 @@
       ],
       "name": "Testimonials",
       "settings": {
+        "title": "What Our Customers Are Saying",
         "color_scheme": "scheme-3"
       }
     }
@@ -386,7 +379,7 @@
     "rich_text_with_image",
     "featured_collection",
     "custom_image_with_text_rHcWC3",
-    "collection_list_bETi6i",
+    "custom_featured_collection_Nr6Knd",
     "featured_items_naEKXV",
     "custom_image_with_text_7KUt6y",
     "testimonials"
