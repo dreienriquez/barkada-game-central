@@ -26,7 +26,7 @@
             "subtitle": "...is here!",
             "subtitle_font_size": 26,
             "button_label": "VIEW MORE",
-            "button_link": "",
+            "button_link": "shopify://collections/arcane-arcana-games",
             "button_color_scheme": "scheme-1"
           }
         },
@@ -44,7 +44,7 @@
             "subtitle": "Check out our latest games, promos and discounts!",
             "subtitle_font_size": 20,
             "button_label": "VIEW COLLECTION",
-            "button_link": "",
+            "button_link": "shopify://collections/all",
             "button_color_scheme": "scheme-1"
           }
         },
@@ -62,7 +62,7 @@
             "subtitle": "Get to know the publishers behind them and check their other works!",
             "subtitle_font_size": 20,
             "button_label": "MEET THE PUBLISHERS",
-            "button_link": "",
+            "button_link": "shopify://collections",
             "button_color_scheme": "scheme-3"
           }
         }
@@ -165,7 +165,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP THE COLLECTION",
-            "button_link": "",
+            "button_link": "shopify://collections/tactics-tiles-co",
             "button_style_secondary": false
           }
         }
@@ -199,25 +199,25 @@
         "featured_collection_dLQmHY": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "arcane-arcana-games"
           }
         },
         "featured_collection_77DHAy": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "bgc-accessories"
           }
         },
         "featured_collection_4JcdTb": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "bgc-playlabs"
           }
         },
         "featured_collection_iLQw3q": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "tactics-tiles-co"
           }
         }
       },
@@ -250,7 +250,7 @@
             "background_image": "shopify://shop_images/Gemini_Generated_Image_mfvb2bmfvb2bmfvb_4.png",
             "item_title": "BGC Crystal D6 (Pair)",
             "item_description": "Make your rolls stand out with these eye-catching dice!",
-            "link": "",
+            "link": "shopify://products/bgc-crystal-d6-pair",
             "link_name": "SHOP NOW"
           }
         },
@@ -260,7 +260,7 @@
             "background_image": "shopify://shop_images/Gemini_Generated_Image_mfvb2bmfvb2bmfvb_3.png",
             "item_title": "BGC Euro Card Sleeves (100-pack)",
             "item_description": "Keep your favorite game components safe!",
-            "link": "",
+            "link": "shopify://products/bgc-euro-card-sleeves",
             "link_name": "SHOP NOW"
           }
         }
