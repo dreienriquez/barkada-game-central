@@ -136,6 +136,52 @@
         "padding_bottom": 36
       }
     },
+    "category_section_UJNxp7": {
+      "type": "category-section",
+      "blocks": {
+        "collection_tab_mT83pE": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "board-games"
+          }
+        },
+        "collection_tab_f9YtqU": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "card-game"
+          }
+        },
+        "collection_tab_CyAhnK": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "sleeves"
+          }
+        },
+        "collection_tab_wLmRWH": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "dice-dice-trays"
+          }
+        },
+        "collection_tab_g8MEJM": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "playmats"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tab_mT83pE",
+        "collection_tab_f9YtqU",
+        "collection_tab_CyAhnK",
+        "collection_tab_wLmRWH",
+        "collection_tab_g8MEJM"
+      ],
+      "name": "Category Section",
+      "settings": {
+        "title": "Shop Our Top Categories"
+      }
+    },
     "custom_image_with_text_rHcWC3": {
       "type": "custom-image-with-text",
       "blocks": {
@@ -378,6 +424,7 @@
     "featured_carousel_x87Ap6",
     "rich_text_with_image",
     "featured_collection",
+    "category_section_UJNxp7",
     "custom_image_with_text_rHcWC3",
     "custom_featured_collection_Nr6Knd",
     "featured_items_naEKXV",
