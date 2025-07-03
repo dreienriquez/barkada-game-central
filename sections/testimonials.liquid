@@ -74,7 +74,7 @@
     <div class='nav-btn-1 next-1'>→</div>
   </div>
   <h1 class='twcss-font-heading twcss-pb-[3.5rem] twcss-font-bold twcss-text-[3.5rem]'>
-    What Our Customers Are Saying
+    {{ settings.title }}
   </h1>
   <div class='swiper-wrapper'>
     {% for block in section.blocks %}
@@ -114,6 +114,12 @@
   "tag": "section",
   "class": "testimonials-section",
   "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "What Our Customers Are Saying",
+      "label": "Title"
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",

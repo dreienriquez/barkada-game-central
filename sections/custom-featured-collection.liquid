@@ -1,0 +1,158 @@
+<link
+  rel='stylesheet'
+  href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'
+>
+<style>
+  .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  #carousel-container-2 {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    padding: 5rem;
+  }
+
+  .navigation-buttons-2 .nav-btn-2 {
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 10;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 15%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    pointer-events: none;
+    margin: 0 1rem;
+  }
+
+  .navigation-buttons-2 .nav-btn-2.swiper-button-disabled {
+    display: none;
+  }
+
+  .navigation-buttons-2 .previous-2 {
+    left: 5rem;
+    transform: translate(-200%, -50%);
+  }
+
+  .navigation-buttons-2 .next-2 {
+    right: 5rem;
+    transform: translate(100%, -50%);
+  }
+
+  #carousel-container-2:hover .navigation-buttons-2 .nav-btn-2 {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #carousel-container-2:hover .navigation-buttons-2 .previous-2 {
+    transform: translate(0, -50%);
+  }
+
+  #carousel-container-2:hover .navigation-buttons-2 .next-2 {
+    transform: translate(0, -50%);
+  }
+</style>
+
+<div
+  id='carousel-container-2'
+  class='swiper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
+>
+  <div class='navigation-buttons-2'>
+    <div class='nav-btn-2 previous-2'>←</div>
+    <div class='nav-btn-2 next-2'>→</div>
+  </div>
+  <h1 class='twcss-font-heading twcss-pb-[3.5rem] twcss-font-bold twcss-text-[3.5rem]'>{{ settings.title }}</h1>
+  <div class='swiper-wrapper'>
+    {% for block in section.blocks %}
+      {% render 'featured-collection-item', collection: block %}
+    {% endfor %}
+  </div>
+</div>
+
+<script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
+
+<script>
+  var swiper = new Swiper('#carousel-container-2', {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    grabCursor: 'true',
+    navigation: {
+      nextEl: '.next-2',
+      prevEl: '.previous-2',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      750: {
+        slidesPerView: 2,
+      },
+      990: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Featured Collections",
+  "tag": "section",
+  "class": "custom-featured-collection-section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "t:sections.featured-collection.settings.title.default",
+      "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-2"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "featured_collection",
+      "name": "t:sections.collection-list.blocks.featured_collection.name",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Featured Collections",
+      "blocks": [
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
