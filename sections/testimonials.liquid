@@ -16,7 +16,6 @@
     margin: 0 auto;
     overflow: hidden;
     width: 100%;
-    padding: 5rem;
   }
 
   .navigation-buttons-1 .nav-btn-1 {
@@ -67,7 +66,7 @@
 
 <div
   id='carousel-container-1'
-  class='swiper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
+  class='twcss-p-[1.5rem] lg:twcss-p-[5rem] swiper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
 >
   <div class='navigation-buttons-1'>
     <div class='nav-btn-1 previous-1'>←</div>
@@ -96,7 +95,8 @@
     },
     breakpoints: {
       320: {
-        slidesPerView: 1,
+        slidesPerView: 1.05,
+        spaceBetween: 25,
       },
       750: {
         slidesPerView: 2,

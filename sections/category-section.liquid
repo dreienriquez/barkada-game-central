@@ -3,35 +3,17 @@
     margin: 4rem 0;
   }
 
-  .section-header {
-    margin-bottom: 2rem;
-  }
-
-  .section-header.text-left {
-    text-align: left;
-  }
-
-  .section-header.text-center {
-    text-align: center;
-  }
-
-  .section-header.text-right {
-    text-align: right;
-  }
-
   .category-tabs ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0 0 2rem 0;
-    gap: 1.5rem;
-    border-bottom: 2px solid #ccc;
+    gap: 5rem;
   }
 
   .category-tabs li {
-    padding: 0.5rem 1rem;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 800;
     border-bottom: 2px solid transparent;
   }
 
@@ -45,7 +27,8 @@
 
   .tab-content.active {
     display: flex;
-    overflow-x: auto;
+    flex-direction: row;
+    overflow: hidden;
     gap: 1.5rem;
   }
 
@@ -128,17 +111,108 @@
     background-color: #f0f0f0;
     color: #777;
   }
+
+  .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  #carousel-container-3 {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .navigation-buttons-3 .nav-btn-3 {
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 10;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 15%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    pointer-events: none;
+    margin: 0 1rem;
+  }
+
+  .navigation-buttons-3 .nav-btn-3.swiper-button-disabled {
+    display: none;
+  }
+
+  .navigation-buttons-3 .previous-3 {
+    left: 5rem;
+    transform: translate(-300%, -50%);
+  }
+
+  .navigation-buttons-3 .next-3 {
+    right: 5rem;
+    transform: translate(100%, -50%);
+  }
+
+  #carousel-container-3:hover .navigation-buttons-3 .nav-btn-3 {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #carousel-container-3:hover .navigation-buttons-3 .previous-3 {
+    transform: translate(0, -50%);
+  }
+
+  #carousel-container-3:hover .navigation-buttons-3 .next-3 {
+    transform: translate(0, -50%);
+  }
+
+  @media screen and (max-width: 749px) {
+    .category-tabs {
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .category-tabs ul {
+      display: flex;
+      flex-wrap: nowrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 1rem;
+    }
+
+    .category-tabs li {
+      white-space: nowrap;
+      flex: 0 0 auto;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+
+    .category-tabs li.active {
+      border-color: black;
+      font-weight: bold;
+    }
+  }
 </style>
-<div class='category-section'>
-  <div class='section-header'>
-    <h2>{{ section.settings.title }}</h2>
-  </div>
+<div
+  class='twcss-p-[1.5rem] lg:twcss-p-[5rem] {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
+>
+  <h1 class='twcss-font-heading twcss-pb-[3.5rem] twcss-font-bold twcss-text-[3.5rem]'>
+    {{ section.settings.title }}
+  </h1>
 
   <div class='category-tabs'>
     <ul>
       {% for block in section.blocks %}
-        <li class='tab-link{% if forloop.first %} active{% endif %}' data-tab='tab-{{ block.id }}'>
-          {{ block.settings.collection.title }}
+        <li class='{% if forloop.first %}active{% endif %}' data-tab='tab-{{ block.id }}'>
+          <span class='twcss-uppercase'>{{ block.settings.collection.title }}</span>
         </li>
       {% endfor %}
     </ul>
@@ -147,14 +221,75 @@
   {% for block in section.blocks %}
     {% assign collection = block.settings.collection %}
     <div id='tab-{{ block.id }}' class='tab-content{% if forloop.first %} active{% endif %}'>
-      <div class='product-slider'>
-        {% for product in collection.products %}
-          {% render 'category-item', product: product %}
-        {% endfor %}
+      <div
+        id='carousel-container-3'
+        class='swiper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
+      >
+        <div class='navigation-buttons-3'>
+          <div class='nav-btn-3 previous-3'>←</div>
+          <div class='nav-btn-3 next-3'>→</div>
+        </div>
+        <div class='swiper-wrapper'>
+          {% for product in collection.products %}
+            <div class='swiper-slide'>
+              {% render 'category-item',
+                card_product: product,
+                media_aspect_ratio: section.settings.image_ratio,
+                image_shape: section.settings.image_shape,
+                show_secondary_image: section.settings.show_secondary_image,
+                show_vendor: section.settings.show_vendor,
+                show_rating: section.settings.show_rating,
+                skip_styles: true,
+                section_id: section.id,
+                quick_add: section.settings.quick_add
+              %}
+            </div>
+          {% endfor %}
+        </div>
       </div>
     </div>
   {% endfor %}
 </div>
+
+<script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.category-tabs li');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', function () {
+        tabs.forEach((t) => t.classList.remove('active'));
+        contents.forEach((c) => c.classList.remove('active'));
+
+        tab.classList.add('active');
+        contents[index].classList.add('active');
+      });
+    });
+  });
+
+  var swiper = new Swiper('#carousel-container-3', {
+    slidesPerView: 3.5,
+    spaceBetween: 0,
+    grabCursor: 'true',
+    navigation: {
+      nextEl: '.next-3',
+      prevEl: '.previous-3',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.8,
+      },
+      750: {
+        slidesPerView: 2.5,
+      },
+      990: {
+        slidesPerView: 3.5,
+      },
+    },
+  });
+</script>
 
 {% schema %}
 {
@@ -165,6 +300,111 @@
       "id": "title",
       "label": "Section Title",
       "default": "Shop Our Top Categories"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__3.content"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.main-collection-product-grid.settings.image_ratio.label"
+    },
+    {
+      "type": "select",
+      "id": "image_shape",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:sections.all.image_shape.options__1.label"
+        },
+        {
+          "value": "arch",
+          "label": "t:sections.all.image_shape.options__2.label"
+        },
+        {
+          "value": "blob",
+          "label": "t:sections.all.image_shape.options__3.label"
+        },
+        {
+          "value": "chevronleft",
+          "label": "t:sections.all.image_shape.options__4.label"
+        },
+        {
+          "value": "chevronright",
+          "label": "t:sections.all.image_shape.options__5.label"
+        },
+        {
+          "value": "diamond",
+          "label": "t:sections.all.image_shape.options__6.label"
+        },
+        {
+          "value": "parallelogram",
+          "label": "t:sections.all.image_shape.options__7.label"
+        },
+        {
+          "value": "round",
+          "label": "t:sections.all.image_shape.options__8.label"
+        }
+      ],
+      "default": "default",
+      "label": "t:sections.all.image_shape.label",
+      "info": "t:sections.all.image_shape.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_secondary_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_vendor.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_rating.label",
+      "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
+    },
+    {
+      "type": "select",
+      "id": "quick_add",
+      "default": "none",
+      "label": "t:sections.main-collection-product-grid.settings.quick_add.label",
+      "info": "t:sections.main-collection-product-grid.settings.quick_add.info",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_1"
+        },
+        {
+          "value": "standard",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_2"
+        },
+        {
+          "value": "bulk",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_3"
+        }
+      ]
     }
   ],
   "blocks": [
@@ -183,8 +423,7 @@
   "max_blocks": 10,
   "presets": [
     {
-      "name": "Category Section",
-      "category": "Collections"
+      "name": "Category Section"
     }
   ]
 }
