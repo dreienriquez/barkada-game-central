@@ -1,11 +1,9 @@
 <div
-  class='swiper-slide color-{{ settings.color_scheme }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
+  class='swiper-slide {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
 >
-  <div class='featured-collection-block'>
-    <a href='{{ collection.url }}'>
-      <img src='{{ collection.image | image_url: width: 800 }}' alt='{{ collection.title }}'>
-    </a>
-    <h2>{{ collection.title }}</h2>
-    <a href='{{ collection.url }}' class='collection-link'>Explore</a>
+  <div class='twcss-flex twcss-flex-col twcss-gap-[2rem]'>
+    <img src='{{ collection.featured_image | image_url: width: 800 }}' alt='{{ collection.title }}'>
+    <h2 class='twcss-text-4xl twcss-font-bold'>{{ collection.title }}</h2>
+    <a href='{{ collection.url }}' class='collection-link twcss-underline'>EXPLORE</a>
   </div>
 </div>

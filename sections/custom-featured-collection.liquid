@@ -73,10 +73,10 @@
     <div class='nav-btn-2 previous-2'>←</div>
     <div class='nav-btn-2 next-2'>→</div>
   </div>
-  <h1 class='twcss-font-heading twcss-pb-[3.5rem] twcss-font-bold twcss-text-[3.5rem]'>{{ settings.title }}</h1>
+  <h1 class='twcss-font-heading twcss-pb-[3rem] twcss-font-bold twcss-text-[3.5rem]'>{{ section.settings.title }}</h1>
   <div class='swiper-wrapper'>
     {% for block in section.blocks %}
-      {% render 'featured-collection-item', collection: block %}
+      {% render 'featured-collection-item', collection: block.settings.collection %}
     {% endfor %}
   </div>
 </div>
@@ -85,7 +85,7 @@
 
 <script>
   var swiper = new Swiper('#carousel-container-2', {
-    slidesPerView: 3,
+    slidesPerView: 3.25,
     spaceBetween: 25,
     grabCursor: 'true',
     navigation: {
@@ -100,7 +100,7 @@
         slidesPerView: 2,
       },
       990: {
-        slidesPerView: 3,
+        slidesPerView: 3.25,
       },
     },
   });
