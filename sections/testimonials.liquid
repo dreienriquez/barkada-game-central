@@ -88,7 +88,10 @@
   var swiper = new Swiper('#carousel-container-1', {
     slidesPerView: 3,
     spaceBetween: 50,
-    mousewheel: true,
+    mousewheel: {
+      enabled: true,
+      forceToAxis: true,
+    },
     grabCursor: 'true',
     navigation: {
       nextEl: '.next-1',

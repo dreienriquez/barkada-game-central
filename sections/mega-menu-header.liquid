@@ -348,6 +348,7 @@
 
   detailItems.forEach((item) => {
     const summary = item.querySelector('summary');
+    if (summary && summary.classList.contains('header__icon--search')) return;
 
     if (summary) {
       summary.addEventListener('mouseenter', () => {
