@@ -14,7 +14,7 @@
     <div class='collection-hero__text-wrapper'>
       <h1 class='twcss-text-[3.5rem] collection-hero__title'>
         <span class='visually-hidden'>{{ 'sections.collection_template.title' | t }}: </span>
-        {{- collection.title | escape -}}
+        All {{ collection.title | escape -}}
       </h1>
 
       {%- if section.settings.show_collection_description -%}
