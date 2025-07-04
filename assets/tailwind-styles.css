@@ -690,6 +690,10 @@ video {
   flex-direction: column !important;
 }
 
+.twcss-flex-wrap {
+  flex-wrap: wrap !important;
+}
+
 .twcss-items-start {
   align-items: flex-start !important;
 }
