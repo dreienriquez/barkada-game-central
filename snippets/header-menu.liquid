@@ -40,7 +40,16 @@
                 tabindex='-1'
               >
                 <ul
-                  class='twcss-grid twcss-w-full twcss-gap-0 twcss-p-0 twcss-grid-cols-{{ link.links.size | plus: filtered_image_blocks.size }} mega-menu__list page-width {% if link.levels == 1 %} mega-menu__list--condensed{% endif %}'
+                  class='
+                    {%- if link.levels > 1 -%}
+                    twcss-grid twcss-grid-cols-{{ link.links.size | plus: filtered_image_blocks.size }}
+                    {%- endif %}
+                    {%- if link.levels == 1 -%}
+                    twcss-grid twcss-grid-cols-{{ 1 | plus: filtered_image_blocks.size }}
+                    {%- endif %}
+                     twcss-w-full twcss-h-[40vh] twcss-gap-0 twcss-p-0
+                     mega-menu__list page-width {% if link.levels == 1 %} mega-menu__list--condensed{% endif %}
+                  '
                   role='list'
                 >
                   {%- for childlink in link.links -%}
