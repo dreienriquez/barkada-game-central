@@ -738,6 +738,14 @@ video {
   gap: 2rem !important;
 }
 
+.twcss-gap-10 {
+  gap: 2.5rem !important;
+}
+
+.twcss-gap-5 {
+  gap: 1.25rem !important;
+}
+
 .twcss-rounded {
   border-radius: 0.25rem !important;
 }
@@ -763,6 +771,14 @@ video {
 }
 
 .twcss-p-\[4rem\] {
+  padding: 4rem !important;
+}
+
+.twcss-p-10 {
+  padding: 2.5rem !important;
+}
+
+.twcss-p-16 {
   padding: 4rem !important;
 }
 
@@ -850,8 +866,32 @@ video {
   font-size: 2.5rem !important;
 }
 
+.twcss-text-\[1rem\] {
+  font-size: 1rem !important;
+}
+
+.twcss-text-\[1\.8rem\] {
+  font-size: 1.8rem !important;
+}
+
+.twcss-text-\[1\.2rem\] {
+  font-size: 1.2rem !important;
+}
+
+.twcss-text-\[1\.3rem\] {
+  font-size: 1.3rem !important;
+}
+
+.twcss-text-\[1\.4rem\] {
+  font-size: 1.4rem !important;
+}
+
 .twcss-font-bold {
   font-weight: 700 !important;
+}
+
+.twcss-font-normal {
+  font-weight: 400 !important;
 }
 
 .twcss-uppercase {
@@ -861,6 +901,11 @@ video {
 .twcss-text-white {
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.twcss-text-orange-500 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(249 115 22 / var(--tw-text-opacity)) !important;
 }
 
 .twcss-underline {
