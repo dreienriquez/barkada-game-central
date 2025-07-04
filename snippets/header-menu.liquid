@@ -1,6 +1,16 @@
 <nav class='header__inline-menu'>
   <ul class='list-menu list-menu--inline' role='list'>
     {%- for link in section.settings.menu.links -%}
+      {% assign image_blocks = section.blocks | where: 'type', 'image_block' %}
+      {% assign filtered_image_blocks = '' %}
+
+      {% for image_block in image_blocks %}
+        {% if image_block.settings.parent == link.title %}
+          {% assign filtered_image_blocks = filtered_image_blocks | append: image_block.id | append: ',' %}
+        {% endif %}
+      {% endfor %}
+      {% assign filtered_image_blocks = filtered_image_blocks | split: ',' | compact %}
+
       <li>
         {%- if link.links != blank -%}
           <header-menu>
@@ -26,15 +36,15 @@
               </summary>
               <div
                 id='MegaMenu-Content-{{ forloop.index }}'
-                class='mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup'
+                class='twcss-py-0 mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup'
                 tabindex='-1'
               >
                 <ul
-                  class='mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}'
+                  class='twcss-grid twcss-w-full twcss-gap-0 twcss-p-0 twcss-grid-cols-{{ link.links.size | plus: filtered_image_blocks.size }} mega-menu__list page-width {% if link.levels == 1 %} mega-menu__list--condensed{% endif %}'
                   role='list'
                 >
                   {%- for childlink in link.links -%}
-                    <li>
+                    <li class='twcss-p-8'>
                       <a
                         id='HeaderMenu-{{ link.handle }}-{{ childlink.handle }}'
                         href='{{ childlink.url }}'
@@ -43,7 +53,7 @@
                           aria-current='page'
                         {% endif %}
                       >
-                        {{ childlink.title | escape }}
+                        {{ childlink.title | escape -}}
                       </a>
                       {%- if childlink.links != blank -%}
                         <ul class='list-unstyled' role='list'>
@@ -65,6 +75,13 @@
                       {%- endif -%}
                     </li>
                   {%- endfor -%}
+                  {% for block in image_blocks %}
+                    {% if block.settings.parent == link.title %}
+                      <li>
+                        {% render 'mega-menu-item', block: block %}
+                      </li>
+                    {% endif %}
+                  {% endfor %}
                 </ul>
               </div>
             </details>
