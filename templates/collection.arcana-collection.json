@@ -32,14 +32,14 @@
         "heading_QBMEQQ": {
           "type": "heading",
           "settings": {
-            "heading": "BGC PlayLabs",
+            "heading": "Arcane Arcana Games",
             "heading_size": "h1"
           }
         },
         "text_BpKbgF": {
           "type": "text",
           "settings": {
-            "text": "<p>Crafting vibrant, easy-to-learn games for every barkada, BGC PlayLabs specializes in creating instant fun for parties, gatherings, and casual play. Get ready for laughter and memorable moments!</p>",
+            "text": "<p>Unleash epic stories and grand adventures with Arcane Arcana Games. We bring rich lore, captivating themes, and unique gameplay to life, perfect for those seeking immersive narrative and cooperative challenges.</p>",
             "text_style": "body"
           }
         },
@@ -47,10 +47,10 @@
           "type": "social_links",
           "settings": {
             "social_facebook_link": "https://www.facebook.com/GamingLibrary/",
-            "social_instagram_link": "https://www.instagram.com/gaminglib/",
+            "social_instagram_link": "",
             "social_x_link": "",
-            "social_youtube_link": "https://www.youtube.com/@TheGamingLibraryYT/",
-            "website_link": ""
+            "social_youtube_link": "",
+            "website_link": "https://www.gaminglib.com/"
           }
         }
       },
@@ -62,7 +62,7 @@
       ],
       "name": "Custom Image with Text",
       "settings": {
-        "image": "shopify://shop_images/Gemini_Generated_Image_dz5xl2dz5xl2dz5x_3.png",
+        "image": "shopify://shop_images/Gemini_Generated_Image_dz5xl2dz5xl2dz5x_1.png",
         "height": "medium",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -83,14 +83,14 @@
         "heading_EarDNG": {
           "type": "heading",
           "settings": {
-            "heading": "At BGC PlayLabs, our mission is simple: to bottle up that unique Filipino 'barkada' energy and pour it into every game we make. We believe the best memories aren't just made playing games, but laughing so hard with your friends you forget who's even winning.",
+            "heading": "We delve into the unseen, the mythical, and the untold stories. Arcane Arcana Games is dedicated to building worlds that draw you in, whether you're battling ancient spirits with friends or surviving a lost island on your own. It's about the journey, the discovery, and the magic.",
             "heading_size": "h2"
           }
         },
         "text_AjmXQY": {
           "type": "text",
           "settings": {
-            "text": "<p>— Sofia 'Pia' Ramirez, CEO, BGC PlayLabs</p>"
+            "text": "<p>— Dr. Elena Reyes, CEO, Arcane Arcana Games</p>"
           }
         }
       },
@@ -122,14 +122,14 @@
         "heading_PNB3gE": {
           "type": "heading",
           "settings": {
-            "heading": "Manila Mania! (Board Game)",
+            "heading": "Mythos of Luzon",
             "heading_size": "h0"
           }
         },
         "text_mXK6pP": {
           "type": "text",
           "settings": {
-            "text": "<p>Experience the vibrant chaos and charm of Metro Manila in this exciting party-style board game!</p>",
+            "text": "<p>Delve into the rich folklore of Luzon in this cooperative card game</p>",
             "text_style": "body"
           }
         },
@@ -137,7 +137,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "shopify://collections/bgc-playlabs",
+            "button_link": "shopify://collections/arcane-arcana-games",
             "button_style_secondary": false
           }
         }
@@ -150,8 +150,8 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Gemini_Generated_Image_rllu37rllu37rllu_1.png",
-        "height": "adapt",
+        "image": "shopify://shop_images/Gemini_Generated_Image_rllu37rllu37rllu.png",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
