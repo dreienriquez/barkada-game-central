@@ -33,6 +33,21 @@
     },
     "mega-menu-header": {
       "type": "mega-menu-header",
+      "blocks": {
+        "image_block_yWKrBy": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_dz5xl2dz5xl2dz5x_3.png",
+            "title": "BGC PlayLabs",
+            "subtitle": "Let the games begin!",
+            "url": "shopify://collections/bgc-playlabs",
+            "parent": "Shop"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_yWKrBy"
+      ],
       "settings": {
         "menu": "main-menu",
         "sticky_header_type": "always",
