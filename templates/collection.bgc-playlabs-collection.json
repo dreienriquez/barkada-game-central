@@ -42,12 +42,23 @@
             "text": "<p>Crafting vibrant, easy-to-learn games for every barkada, BGC PlayLabs specializes in creating instant fun for parties, gatherings, and casual play. Get ready for laughter and memorable moments!</p>",
             "text_style": "body"
           }
+        },
+        "social_links_BpKbgF": {
+          "type": "social_links",
+          "settings": {
+            "social_facebook_link": "https://www.google.com/",
+            "social_instagram_link": "https://www.google.com/",
+            "social_x_link": "https://www.google.com/",
+            "social_youtube_link": "https://www.google.com/",
+            "website_link": "https://www.google.com/"
+          }
         }
       },
       "block_order": [
         "caption_AxCNFt",
         "heading_QBMEQQ",
-        "text_BpKbgF"
+        "text_BpKbgF",
+        "social_links_BpKbgF"
       ],
       "name": "Custom Image with Text",
       "settings": {

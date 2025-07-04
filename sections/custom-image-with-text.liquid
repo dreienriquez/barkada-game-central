@@ -101,6 +101,8 @@
               {%- endif -%}
             {%- when 'email_form' -%}
               {%- render 'newsletter' -%}
+            {%- when 'social_links' -%}
+              {%- render 'social-links', block: block -%}
           {%- endcase -%}
         {%- endfor -%}
       </div>
@@ -473,6 +475,47 @@
       "type": "email_form",
       "name": "t:sections.newsletter.blocks.email_form.name",
       "limit": 1
+    },
+    {
+      "type": "social_links",
+      "name": "Social Links",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Social Links"
+        },
+        {
+          "type": "text",
+          "id": "social_facebook_link",
+          "label": "t:settings_schema.social-media.settings.social_facebook_link.label",
+          "placeholder": "t:settings_schema.social-media.settings.social_facebook_link.info"
+        },
+        {
+          "type": "text",
+          "id": "social_instagram_link",
+          "label": "t:settings_schema.social-media.settings.social_instagram_link.label",
+          "placeholder": "t:settings_schema.social-media.settings.social_instagram_link.info"
+        },
+        {
+          "type": "text",
+          "id": "social_x_link",
+          "label": "X",
+          "placeholder": "https://www.x.com/shopify"
+        },
+        {
+          "type": "text",
+          "id": "social_youtube_link",
+          "label": "t:settings_schema.social-media.settings.social_youtube_link.label",
+          "placeholder": "t:settings_schema.social-media.settings.social_youtube_link.info"
+        },
+        {
+          "type": "text",
+          "id": "website_link",
+          "label": "Website",
+          "placeholder": "https://www.google.com/"
+        }
+      ]
     }
   ],
   "presets": [

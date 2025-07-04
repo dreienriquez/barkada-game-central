@@ -1,0 +1,41 @@
+<style>
+  .social-links a {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .social-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+    transform-origin: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .social-links a:hover::after {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+</style>
+<div class='social-links twcss-flex twcss-gap-[2rem]'>
+  {% if block.settings.social_facebook_link != blank %}
+    <a href='{{ block.settings.social_facebook_link }}' target='_blank' rel='noopener'>Facebook</a>
+  {% endif %}
+  {% if block.settings.social_instagram_link != blank %}
+    <a href='{{ block.settings.social_instagram_link }}' target='_blank' rel='noopener'>Instagram</a>
+  {% endif %}
+  {% if block.settings.social_x_link != blank %}
+    <a href='{{ block.settings.social_x_link }}' target='_blank' rel='noopener'>X</a>
+  {% endif %}
+  {% if block.settings.social_youtube_link != blank %}
+    <a href='{{ block.settings.social_youtube_link }}' target='_blank' rel='noopener'>YouTube</a>
+  {% endif %}
+  {% if block.settings.website_link != blank %}
+    <a href='{{ block.settings.website_link }}' target='_blank' rel='noopener'>Website</a>
+  {% endif %}
+</div>
