@@ -43,10 +43,21 @@
             "url": "shopify://collections/bgc-playlabs",
             "parent": "Shop"
           }
+        },
+        "image_block_mMcthk": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_dz5xl2dz5xl2dz5x.png",
+            "title": "BGC Accessories",
+            "subtitle": "",
+            "url": "shopify://collections/bgc-accessories",
+            "parent": "Shop"
+          }
         }
       },
       "block_order": [
-        "image_block_yWKrBy"
+        "image_block_yWKrBy",
+        "image_block_mMcthk"
       ],
       "settings": {
         "menu": "main-menu",
