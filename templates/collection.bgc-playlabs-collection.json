@@ -66,6 +66,94 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_De3UNp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_EarDNG": {
+          "type": "heading",
+          "settings": {
+            "heading": "At BGC PlayLabs, our mission is simple: to bottle up that unique Filipino 'barkada' energy and pour it into every game we make. We believe the best memories aren't just made playing games, but laughing so hard with your friends you forget who's even winning.",
+            "heading_size": "h2"
+          }
+        },
+        "text_AjmXQY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>— Sofia 'Pia' Ramirez, CEO, BGC PlayLabs</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EarDNG",
+        "text_AjmXQY"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "image_with_text_YxbTcp": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_L8Pt3d": {
+          "type": "caption",
+          "settings": {
+            "caption": "FEATURED PRODUCT",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "heading_PNB3gE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Manila Mania! (Board Game)",
+            "heading_size": "h0"
+          }
+        },
+        "text_mXK6pP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Experience the vibrant chaos and charm of Metro Manila in this exciting party-style board game!</p>",
+            "text_style": "body"
+          }
+        },
+        "button_67dYpJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/bgc-playlabs",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_L8Pt3d",
+        "heading_PNB3gE",
+        "text_mXK6pP",
+        "button_67dYpJ"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Gemini_Generated_Image_rllu37rllu37rllu_1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-3",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -90,6 +178,8 @@
   "order": [
     "banner",
     "custom_image_with_text_dNXYF3",
+    "rich_text_De3UNp",
+    "image_with_text_YxbTcp",
     "product-grid"
   ]
 }
