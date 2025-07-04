@@ -361,7 +361,7 @@
 {
   "name": "Mega Menu",
   "class": "section-header",
-  "max_blocks": 3,
+  "max_blocks": 7,
   "settings": [
     {
       "type": "link_list",
@@ -485,6 +485,38 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Image Link"
+        },
+        {
+          "type": "text",
+          "id": "parent",
+          "label": "Parent Menu Title",
+          "info": "Match the parent menu title exactly"
+        }
+      ]
     }
   ]
 }
