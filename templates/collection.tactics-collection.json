@@ -1,0 +1,196 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "custom_image_with_text_dNXYF3": {
+      "type": "custom-image-with-text",
+      "blocks": {
+        "caption_AxCNFt": {
+          "type": "caption",
+          "settings": {
+            "caption": "INTRODUCING",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        },
+        "heading_QBMEQQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "BGC PlayLabs",
+            "heading_size": "h1"
+          }
+        },
+        "text_BpKbgF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Crafting vibrant, easy-to-learn games for every barkada, BGC PlayLabs specializes in creating instant fun for parties, gatherings, and casual play. Get ready for laughter and memorable moments!</p>",
+            "text_style": "body"
+          }
+        },
+        "social_links_BpKbgF": {
+          "type": "social_links",
+          "settings": {
+            "social_facebook_link": "https://www.facebook.com/GamingLibrary/",
+            "social_instagram_link": "https://www.instagram.com/gaminglib/",
+            "social_x_link": "",
+            "social_youtube_link": "https://www.youtube.com/@TheGamingLibraryYT/",
+            "website_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "caption_AxCNFt",
+        "heading_QBMEQQ",
+        "text_BpKbgF",
+        "social_links_BpKbgF"
+      ],
+      "name": "Custom Image with Text",
+      "settings": {
+        "image": "shopify://shop_images/Gemini_Generated_Image_dz5xl2dz5xl2dz5x_3.png",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-5",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_De3UNp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_EarDNG": {
+          "type": "heading",
+          "settings": {
+            "heading": "At BGC PlayLabs, our mission is simple: to bottle up that unique Filipino 'barkada' energy and pour it into every game we make. We believe the best memories aren't just made playing games, but laughing so hard with your friends you forget who's even winning.",
+            "heading_size": "h2"
+          }
+        },
+        "text_AjmXQY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>— Sofia 'Pia' Ramirez, CEO, BGC PlayLabs</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EarDNG",
+        "text_AjmXQY"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "image_with_text_YxbTcp": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_L8Pt3d": {
+          "type": "caption",
+          "settings": {
+            "caption": "FEATURED PRODUCT",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "heading_PNB3gE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Manila Mania! (Board Game)",
+            "heading_size": "h0"
+          }
+        },
+        "text_mXK6pP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Experience the vibrant chaos and charm of Metro Manila in this exciting party-style board game!</p>",
+            "text_style": "body"
+          }
+        },
+        "button_67dYpJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/bgc-playlabs",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_L8Pt3d",
+        "heading_PNB3gE",
+        "text_mXK6pP",
+        "button_67dYpJ"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Gemini_Generated_Image_rllu37rllu37rllu_1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-3",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "custom_image_with_text_dNXYF3",
+    "rich_text_De3UNp",
+    "image_with_text_YxbTcp",
+    "product-grid"
+  ]
+}
