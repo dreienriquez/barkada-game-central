@@ -44,6 +44,16 @@
             "parent": "Shop"
           }
         },
+        "image_block_4yY9jC": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_eroor1eroor1eroo.png",
+            "title": "Sample Image",
+            "subtitle": "this is the image",
+            "url": "shopify://collections",
+            "parent": "Sample Menu"
+          }
+        },
         "image_block_mMcthk": {
           "type": "image_block",
           "settings": {
@@ -57,6 +67,7 @@
       },
       "block_order": [
         "image_block_yWKrBy",
+        "image_block_4yY9jC",
         "image_block_mMcthk"
       ],
       "settings": {
