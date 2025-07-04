@@ -109,17 +109,25 @@
     "custom_image_with_text_67cpRW": {
       "type": "custom-image-with-text",
       "blocks": {
+        "caption_BKL6Tz": {
+          "type": "caption",
+          "settings": {
+            "caption": "ABOUT THE PUBLISHER",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        },
         "heading_M3qAWx": {
           "type": "heading",
           "settings": {
-            "heading": "BGC PlayLabs",
+            "heading": "BGC Accessories",
             "heading_size": "h1"
           }
         },
         "text_7TtmTk": {
           "type": "text",
           "settings": {
-            "text": "<p>Crafting vibrant, easy-to-learn games for every barkada, BGC PlayLabs specializes in creating instant fun for parties, gatherings, and casual play. Get ready for laughter and memorable moments!</p>",
+            "text": "<p>Elevate your game. BGC Accessories provides premium, durable enhancements for your entire board game collection, from protective sleeves to stylish dice and functional playmats, ensuring every game night is a smooth experience.</p>",
             "text_style": "subtitle"
           }
         },
@@ -127,19 +135,20 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP THEIR COLLECTION",
-            "button_link": "shopify://collections/bgc-playlabs",
+            "button_link": "shopify://collections/bgc-accessories",
             "button_style_secondary": false
           }
         }
       },
       "block_order": [
+        "caption_BKL6Tz",
         "heading_M3qAWx",
         "text_7TtmTk",
         "button_WmfgRg"
       ],
       "name": "Custom Image with Text",
       "settings": {
-        "image": "shopify://shop_images/Gemini_Generated_Image_dz5xl2dz5xl2dz5x_3.png",
+        "image": "shopify://shop_images/Gemini_Generated_Image_dz5xl2dz5xl2dz5x.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",

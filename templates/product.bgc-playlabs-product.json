@@ -109,6 +109,14 @@
     "custom_image_with_text_67cpRW": {
       "type": "custom-image-with-text",
       "blocks": {
+        "caption_x4Gn3n": {
+          "type": "caption",
+          "settings": {
+            "caption": "ABOUT THE PUBLISHER",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        },
         "heading_M3qAWx": {
           "type": "heading",
           "settings": {
@@ -133,6 +141,7 @@
         }
       },
       "block_order": [
+        "caption_x4Gn3n",
         "heading_M3qAWx",
         "text_7TtmTk",
         "button_WmfgRg"

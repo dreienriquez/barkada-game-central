@@ -120,14 +120,14 @@
         "heading_M3qAWx": {
           "type": "heading",
           "settings": {
-            "heading": "Tactics & Tiles Co.",
+            "heading": "Arcane Arcana Games",
             "heading_size": "h1"
           }
         },
         "text_7TtmTk": {
           "type": "text",
           "settings": {
-            "text": "<p>For the strategists and thinkers, Tactics & Tiles Co. designs immersive board and card games that challenge your mind. Dive into deep mechanics, intricate worlds, and endless strategic possibilities.</p>",
+            "text": "<p>Unleash epic stories and grand adventures with Arcane Arcana Games. We bring rich lore, captivating themes, and unique gameplay to life, perfect for those seeking immersive narrative and cooperative challenges.</p>",
             "text_style": "subtitle"
           }
         },
@@ -135,7 +135,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP THEIR COLLECTION",
-            "button_link": "shopify://collections/tactics-tiles-co",
+            "button_link": "shopify://collections/arcane-arcana-games",
             "button_style_secondary": false
           }
         }
@@ -148,7 +148,7 @@
       ],
       "name": "Custom Image with Text",
       "settings": {
-        "image": "shopify://shop_images/Gemini_Generated_Image_dz5xl2dz5xl2dz5x_2_675b6a4d-25ee-4ba7-a0f9-2be9c0feacf9.png",
+        "image": "shopify://shop_images/Gemini_Generated_Image_dz5xl2dz5xl2dz5x_1.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",

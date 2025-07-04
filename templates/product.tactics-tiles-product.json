@@ -109,17 +109,25 @@
     "custom_image_with_text_67cpRW": {
       "type": "custom-image-with-text",
       "blocks": {
+        "caption_Wjgh6d": {
+          "type": "caption",
+          "settings": {
+            "caption": "ABOUT THE PUBLISHER",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        },
         "heading_M3qAWx": {
           "type": "heading",
           "settings": {
-            "heading": "BGC PlayLabs",
+            "heading": "Tactics & Tiles Co.",
             "heading_size": "h1"
           }
         },
         "text_7TtmTk": {
           "type": "text",
           "settings": {
-            "text": "<p>Crafting vibrant, easy-to-learn games for every barkada, BGC PlayLabs specializes in creating instant fun for parties, gatherings, and casual play. Get ready for laughter and memorable moments!</p>",
+            "text": "<p>For the strategists and thinkers, Tactics & Tiles Co. designs immersive board and card games that challenge your mind. Dive into deep mechanics, intricate worlds, and endless strategic possibilities.</p>",
             "text_style": "subtitle"
           }
         },
@@ -127,19 +135,20 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP THEIR COLLECTION",
-            "button_link": "shopify://collections/bgc-playlabs",
+            "button_link": "shopify://collections/tactics-tiles-co",
             "button_style_secondary": false
           }
         }
       },
       "block_order": [
+        "caption_Wjgh6d",
         "heading_M3qAWx",
         "text_7TtmTk",
         "button_WmfgRg"
       ],
       "name": "Custom Image with Text",
       "settings": {
-        "image": "shopify://shop_images/Gemini_Generated_Image_dz5xl2dz5xl2dz5x_3.png",
+        "image": "shopify://shop_images/Gemini_Generated_Image_dz5xl2dz5xl2dz5x_2_675b6a4d-25ee-4ba7-a0f9-2be9c0feacf9.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
