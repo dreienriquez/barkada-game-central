@@ -340,6 +340,52 @@
   }
 </script>
 
+<script>
+  const menu = document.querySelector('.header-wrapper');
+  const detailItems = menu.querySelectorAll('details');
+  const allMenuItems = menu.querySelectorAll('.header__menu-item');
+  let activeItem = null;
+
+  detailItems.forEach((item) => {
+    const summary = item.querySelector('summary');
+
+    if (summary) {
+      summary.addEventListener('mouseenter', () => {
+        if (activeItem && activeItem !== item) {
+          activeItem.removeAttribute('open');
+        }
+        item.setAttribute('open', true);
+        activeItem = item;
+      });
+    }
+
+    item.addEventListener('mouseenter', () => {
+      if (activeItem && activeItem !== item) {
+        activeItem.removeAttribute('open');
+      }
+      item.setAttribute('open', true);
+      activeItem = item;
+    });
+  });
+
+  allMenuItems.forEach((menuItem) => {
+    menuItem.addEventListener('mouseenter', () => {
+      const parentDetails = menuItem.closest('details');
+      if (!parentDetails && activeItem) {
+        activeItem.removeAttribute('open');
+        activeItem = null;
+      }
+    });
+  });
+
+  menu.addEventListener('mouseleave', () => {
+    if (activeItem) {
+      activeItem.removeAttribute('open');
+      activeItem = null;
+    }
+  });
+</script>
+
 {%- if request.page_type == 'index' -%}
   {% assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" %}
   <script type="application/ld+json">
