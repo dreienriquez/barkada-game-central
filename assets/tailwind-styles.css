@@ -783,6 +783,11 @@ video {
   background-position: center !important;
 }
 
+.twcss-object-contain {
+  -o-object-fit: contain !important;
+  object-fit: contain !important;
+}
+
 .twcss-p-0 {
   padding: 0px !important;
 }

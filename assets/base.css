@@ -3709,3 +3709,7 @@ details-disclosure > details {
 .collection-list .collection-list__item {
   border: 1px solid #f7f8f6;
 }
+
+form-embed {
+  --inline-container-max-width: 75% !important;
+}
