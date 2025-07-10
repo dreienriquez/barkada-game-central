@@ -1,6 +1,7 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
-{%- assign collection = product.collections.first -%}
+{%- assign metaobject = product.metafields.custom.product_collection.value -%}
+{%- assign collection = metaobject.collection.value -%}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
