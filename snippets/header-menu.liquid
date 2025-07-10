@@ -52,8 +52,11 @@
                   '
                   role='list'
                 >
+                  {% if link.levels == 1 %}
+                    <ul class='list-unstyled twcss-pt-8' role='list'>
+                  {% endif %}
                   {%- for childlink in link.links -%}
-                    <li class='twcss-p-8'>
+                    <li class='{% if link.levels > 1 %} twcss-p-8 {% else %} twcss-px-8 {% endif %}'>
                       <a
                         id='HeaderMenu-{{ link.handle }}-{{ childlink.handle }}'
                         href='{{ childlink.url }}'
@@ -84,6 +87,9 @@
                       {%- endif -%}
                     </li>
                   {%- endfor -%}
+                  {% if link.levels == 1 %}
+                    </ul>
+                  {% endif %}
                   {% for block in image_blocks %}
                     {% if block.settings.parent == link.title %}
                       <li class='twcss-min-h-fit'>

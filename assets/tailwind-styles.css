@@ -890,6 +890,11 @@ video {
   padding-bottom: 0.5rem !important;
 }
 
+.twcss-px-8 {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
 .twcss-pb-10 {
   padding-bottom: 2.5rem !important;
 }
@@ -916,6 +921,10 @@ video {
 
 .twcss-pb-\[3rem\] {
   padding-bottom: 3rem !important;
+}
+
+.twcss-pt-8 {
+  padding-top: 2rem !important;
 }
 
 .twcss-text-center {
