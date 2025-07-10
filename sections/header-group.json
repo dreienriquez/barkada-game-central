@@ -48,10 +48,10 @@
           "type": "image_block",
           "settings": {
             "image": "shopify://shop_images/Gemini_Generated_Image_eroor1eroor1eroo.png",
-            "title": "Sample Image",
-            "subtitle": "this is the image",
-            "url": "shopify://collections",
-            "parent": "Sample Menu"
+            "title": "Check our products!",
+            "subtitle": "New games available!",
+            "url": "shopify://collections/all",
+            "parent": "About"
           }
         },
         "image_block_mMcthk": {
@@ -61,7 +61,7 @@
             "title": "BGC Accessories",
             "subtitle": "",
             "url": "shopify://collections/bgc-accessories",
-            "parent": "Shop"
+            "parent": "About"
           }
         }
       },

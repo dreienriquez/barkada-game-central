@@ -126,10 +126,6 @@
     },
     "product_collection_BHpQjL": {
       "type": "product-collection",
-      "blocks": {
-      },
-      "block_order": [
-      ],
       "name": "Product Collection",
       "settings": {
         "height": "large",
