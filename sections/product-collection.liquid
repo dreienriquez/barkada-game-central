@@ -35,28 +35,24 @@
           style='padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;'
         {% endif %}
       >
-        {%- if section.settings.image != blank -%}
-          {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
-            {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
-            {%- capture sizes -%}
+        {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
+          {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
+          {%- capture sizes -%}
               (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
               (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
             {%- endcapture -%}
-          {%- else -%}
-            {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
-            {%- capture sizes -%}
+        {%- else -%}
+          {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
+          {%- capture sizes -%}
               (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
               (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
             {%- endcapture -%}
-          {%- endif -%}
-          {{
-            section.settings.image
-            | image_url: width: 1500
-            | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
-          }}
-        {%- else -%}
-          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
+        {{
+          collection.featured_image
+          | image_url: width: 1500
+          | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+        }}
       </div>
     </div>
     <div class='image-with-text__text-item grid__item'>
@@ -64,49 +60,27 @@
         id='ImageWithText--{{ section.id }}'
         class='image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %} twcss-justify-center '
       >
-        {%- for block in section.blocks -%}
-          {% case block.type %}
-            {%- when 'heading' -%}
-              <h2
-                class='image-with-text__heading inline-richtext {{ block.settings.heading_size }}'
-                {{ block.shopify_attributes }}
-              >
-                {{ block.settings.heading }}
-              </h2>
-            {%- when 'caption' -%}
-              <p
-                class='image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}'
-                {{ block.shopify_attributes }}
-              >
-                {{ block.settings.caption | escape }}
-              </p>
-            {%- when 'text' -%}
-              <div
-                class='twcss-mb-10 image-with-text__text rte {{ block.settings.text_style }}'
-                {{ block.shopify_attributes }}
-              >
-                {{ block.settings.text }}
-              </div>
-            {%- when 'button' -%}
-              {%- if block.settings.button_label != blank -%}
-                <a
-                  {% if block.settings.button_link == blank %}
-                    role='link' aria-disabled='true'
-                  {% else %}
-                    href='{{ block.settings.button_link }}'
-                  {% endif %}
-                  class='button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}'
-                  {{ block.shopify_attributes }}
-                >
-                  {{ block.settings.button_label | escape }}
-                </a>
-              {%- endif -%}
-            {%- when 'email_form' -%}
-              {%- render 'newsletter' -%}
-            {%- when 'social_links' -%}
-              {%- render 'social-links', block: block -%}
-          {%- endcase -%}
-        {%- endfor -%}
+        <p
+          class='image-with-text__text image-with-text__text--caption subtitle subtitle--large'
+        >
+          ABOUT THE PUBLISHER
+        </p>
+        <h2
+          class='image-with-text__heading inline-richtext h1'
+        >
+          {{ collection.title }}
+        </h2>
+        <div
+          class='twcss-mb-10 image-with-text__text rte subtitle'
+        >
+          {{ collection.description }}
+        </div>
+        <a
+          href='{{ collection.url }}'
+          class='button button--primary'
+        >
+          SHOP THEIR COLLECTION
+        </a>
       </div>
     </div>
   </div>
@@ -371,55 +345,6 @@
       ]
     },
     {
-      "type": "caption",
-      "name": "t:sections.image-with-text.blocks.caption.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "caption",
-          "default": "t:sections.image-with-text.blocks.caption.settings.text.default",
-          "label": "t:sections.image-with-text.blocks.caption.settings.text.label"
-        },
-        {
-          "type": "select",
-          "id": "text_style",
-          "options": [
-            {
-              "value": "subtitle",
-              "label": "t:sections.image-with-text.blocks.caption.settings.text_style.options__1.label"
-            },
-            {
-              "value": "caption-with-letter-spacing",
-              "label": "t:sections.image-with-text.blocks.caption.settings.text_style.options__2.label"
-            }
-          ],
-          "default": "caption-with-letter-spacing",
-          "label": "t:sections.image-with-text.blocks.caption.settings.text_style.label"
-        },
-        {
-          "type": "select",
-          "id": "text_size",
-          "options": [
-            {
-              "value": "small",
-              "label": "t:sections.image-with-text.blocks.caption.settings.caption_size.options__1.label"
-            },
-            {
-              "value": "medium",
-              "label": "t:sections.image-with-text.blocks.caption.settings.caption_size.options__2.label"
-            },
-            {
-              "value": "large",
-              "label": "t:sections.image-with-text.blocks.caption.settings.caption_size.options__3.label"
-            }
-          ],
-          "default": "medium",
-          "label": "t:sections.image-with-text.blocks.caption.settings.caption_size.label"
-        }
-      ]
-    },
-    {
       "type": "text",
       "name": "t:sections.image-with-text.blocks.text.name",
       "limit": 1,
@@ -470,52 +395,6 @@
           "id": "button_style_secondary",
           "default": false,
           "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
-        }
-      ]
-    },
-    {
-      "type": "email_form",
-      "name": "t:sections.newsletter.blocks.email_form.name",
-      "limit": 1
-    },
-    {
-      "type": "social_links",
-      "name": "Social Links",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "header",
-          "content": "Social Links"
-        },
-        {
-          "type": "text",
-          "id": "social_facebook_link",
-          "label": "t:settings_schema.social-media.settings.social_facebook_link.label",
-          "placeholder": "t:settings_schema.social-media.settings.social_facebook_link.info"
-        },
-        {
-          "type": "text",
-          "id": "social_instagram_link",
-          "label": "t:settings_schema.social-media.settings.social_instagram_link.label",
-          "placeholder": "t:settings_schema.social-media.settings.social_instagram_link.info"
-        },
-        {
-          "type": "text",
-          "id": "social_x_link",
-          "label": "X",
-          "placeholder": "https://www.x.com/shopify"
-        },
-        {
-          "type": "text",
-          "id": "social_youtube_link",
-          "label": "t:settings_schema.social-media.settings.social_youtube_link.label",
-          "placeholder": "t:settings_schema.social-media.settings.social_youtube_link.info"
-        },
-        {
-          "type": "text",
-          "id": "website_link",
-          "label": "Website",
-          "placeholder": "https://www.google.com/"
         }
       ]
     }

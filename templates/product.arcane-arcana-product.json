@@ -106,67 +106,10 @@
         "padding_bottom": 36
       }
     },
-    "custom_image_with_text_67cpRW": {
-      "type": "custom-image-with-text",
-      "blocks": {
-        "caption_Wjgh6d": {
-          "type": "caption",
-          "settings": {
-            "caption": "ABOUT THE PUBLISHER",
-            "text_style": "subtitle",
-            "text_size": "large"
-          }
-        },
-        "heading_M3qAWx": {
-          "type": "heading",
-          "settings": {
-            "heading": "Arcane Arcana Games",
-            "heading_size": "h1"
-          }
-        },
-        "text_7TtmTk": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Unleash epic stories and grand adventures with Arcane Arcana Games. We bring rich lore, captivating themes, and unique gameplay to life, perfect for those seeking immersive narrative and cooperative challenges.</p>",
-            "text_style": "subtitle"
-          }
-        },
-        "button_WmfgRg": {
-          "type": "button",
-          "settings": {
-            "button_label": "SHOP THEIR COLLECTION",
-            "button_link": "shopify://collections/arcane-arcana-games",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "caption_Wjgh6d",
-        "heading_M3qAWx",
-        "text_7TtmTk",
-        "button_WmfgRg"
-      ],
-      "name": "Custom Image with Text",
-      "settings": {
-        "image": "shopify://shop_images/Gemini_Generated_Image_dz5xl2dz5xl2dz5x_1.png",
-        "height": "large",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "Related Products",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
@@ -184,44 +127,19 @@
     "product_collection_BHpQjL": {
       "type": "product-collection",
       "blocks": {
-        "heading_n4hGjr": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_xcG6f4": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_VAC7fX": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
       },
       "block_order": [
-        "heading_n4hGjr",
-        "text_xcG6f4",
-        "button_VAC7fX"
       ],
       "name": "Product Collection",
       "settings": {
-        "height": "adapt",
+        "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-2",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
@@ -231,7 +149,6 @@
   },
   "order": [
     "main",
-    "custom_image_with_text_67cpRW",
     "product_collection_BHpQjL",
     "related-products"
   ]

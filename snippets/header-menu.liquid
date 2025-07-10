@@ -86,7 +86,7 @@
                   {%- endfor -%}
                   {% for block in image_blocks %}
                     {% if block.settings.parent == link.title %}
-                      <li>
+                      <li class='twcss-min-h-fit'>
                         {% render 'mega-menu-item', block: block %}
                       </li>
                     {% endif %}
